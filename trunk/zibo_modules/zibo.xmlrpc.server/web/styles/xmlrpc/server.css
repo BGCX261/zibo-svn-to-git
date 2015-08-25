@@ -1,0 +1,12 @@
+#xmlrpcMethods li {
+    list-style: none;
+    margin: 0px 0px 12px 0px;
+}
+    
+#xmlrpcMethods li div {
+    margin-bottom: 3px;
+}
+
+#xmlrpcMethods li div.signature span {
+    font-weight: bold;
+}

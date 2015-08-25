@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<models>
+    <model name="Text" modelClass="joppa\text\model\TextModel" dataClass="joppa\text\model\data\TextData" log="true">
+        <field name="text" type="text" localized="true" />
+        <field name="version" type="integer" />
+    </model>    
+</models>

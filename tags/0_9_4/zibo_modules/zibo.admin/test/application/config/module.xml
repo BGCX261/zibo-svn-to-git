@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modules xmlns="http://www.zibo.be/ns/zibo/admin/modules"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.zibo.be/ns/zibo/admin/modules http://www.zibo.be/ns/zibo/admin/modules ">
+    <module namespace="zibo" name="admin" version="0.1.0" ziboVersion="0.1.0">
+        <dependency namespace="zibo" name="smarty" version="1.0.0" />
+        <dependency namespace="zibo" name="xml" version="1.0.0" />
+    </module>
+    <module namespace="zibo" name="xml" version="1.0.0" ziboVersion="0.1.0" />
+</modules>

@@ -1,0 +1,47 @@
+#sidebar {
+	margin-right: 12px;
+	float: left;
+	width: 29%;
+	padding: 20px 11px 25px 0px;
+	background: #F7F7F7 url(../../images/sidebar.background.png) repeat-y right;
+	overflow: hidden;
+}
+
+#sidebar div.container {
+	padding: 0 12px 0 12px;
+}
+
+#sidebar.hidden {
+	width: 0px;
+}
+
+#sidebar #toggleButton span,
+#sidebar.hidden #sidebarActions,
+#sidebar.hidden #sidebarPanels,
+#sidebar.hidden #sidebarInformation {
+	display: none;
+}
+
+#sidebar #toggleButton {
+	margin-right: -11px;
+	margin-left: 5px;
+	float: right;
+	display: block;
+	width: 11px;
+	height: 29px;
+	background: url(../../images/sidebar.toggle.close.png) no-repeat;
+}
+
+#sidebar.hidden #toggleButton {
+	background: url(../../images/sidebar.toggle.open.png) no-repeat;
+}
+
+#sidebar div.panel {
+	margin-bottom: 12px;
+	border-bottom: 1px solid #CCC;
+}
+
+#sidebar div.last {
+	margin-bottom:0;
+	border: 0;
+}

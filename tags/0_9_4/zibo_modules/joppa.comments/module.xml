@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modules xmlns="http://www.zibo.be/ns/zibo/admin/modules"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.zibo.be/ns/zibo/admin/modules http://www.zibo.be/ns/zibo/admin/modules ">
+    <module namespace="joppa" name="comments" version="0.2.0" ziboVersion="0.3.0">
+        <dependency namespace="joppa" name="core" version="0.1.0" />
+        <dependency namespace="zibo" name="widget" version="0.1.0" />
+    </module>
+</modules>

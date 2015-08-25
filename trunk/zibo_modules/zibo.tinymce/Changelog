@@ -1,0 +1,4 @@
+* TinyMCEField: Updated package of HtmlView and added / before URLs where needed
+* Updated API documentation
+* TinyMCEListView: updated to new View api
+* TinyMCEField: need full path for the script, added web directory in front of the script path 

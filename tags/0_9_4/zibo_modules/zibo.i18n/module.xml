@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modules xmlns="http://www.zibo.be/ns/zibo/admin/modules"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.zibo.be/ns/zibo/admin/modules http://www.zibo.be/ns/zibo/admin/modules ">
+    <module namespace="zibo" name="i18n" version="0.4.0" ziboVersion="0.9.0" />
+</modules>

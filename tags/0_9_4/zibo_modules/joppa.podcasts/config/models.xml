@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<models>
+    <model name="Podcast" modelClass="joppa\podcast\model\PodcastModel" dataClass="joppa\podcast\model\data\PodcastData" log="true">
+        <field name="author" model="User" relation="belongsTo" label="joppa.podcast.label.author">
+            <validation name="required" />
+        </field>
+        <field name="title" type="string" label="joppa.podcast.label.title">
+            <validation name="required" />
+        </field>
+        <field name="teaser" type="wysiwyg" label="joppa.podcast.label.teaser" />
+        <field name="text" type="wysiwyg" label="joppa.podcast.label.text" />
+        <field name="image" type="image" label="joppa.podcast.label.image" />
+        <field name="audio" type="file" label="joppa.podcast.label.audio">
+            <validation name="extension">
+                <parameter name="extensions" value="mp3" />
+            </validation>
+            <validation name="required" />
+        </field>
+        <field name="isDownloadable" type="boolean" label="joppa.podcast.label.downloadable" />
+        <field name="locale" type="string">
+            <validation name="required" />
+        </field>
+        <field name="slug" type="string">
+            <validation name="required" />
+        </field>
+        <field name="datePublication" type="date" label="joppa.podcast.label.date.publication">
+            <validation name="required" />
+        </field>
+        
+        <index name="slug">
+            <indexField name="slug" />
+        </index>
+        
+        <format name="title">{title}</format>
+        <format name="teaser">{teaser}</format>
+        <format name="image">{image}</format>
+        <format name="date">{datePublication}</format>
+    </model>    
+</models>

@@ -1,0 +1,3 @@
+- renamed JpgIO to JpgImageIO (same for gif and png)
+- reworked the thumbnail api: thumbnails are now created with an Image object instead of a source and destination file
+- moved ImageException and ThumbnailException in a separate exception package

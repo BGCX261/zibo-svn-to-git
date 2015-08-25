@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zibo.log.debug" default="packageLogDebug">
+
+    <property name="phing.command" value="phing" />
+
+	<target name="packageLogDebug">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageLogDebug" />
+        </exec>
+    </target>
+
+</project>

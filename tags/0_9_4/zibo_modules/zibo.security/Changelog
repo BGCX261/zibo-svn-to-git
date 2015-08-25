@@ -1,0 +1,8 @@
+- complete clean up of the source
+- moved the HashAlgorithms (plain, md5 and sha1) to the encryption module and depend on it
+
+
+- SecurityManager: log isRouteAllowed and isPermissionAllowed
+- UnauthorizedException: extend from ZiboException
+- AuthenticationException: extend from ZiboException
+- added and formatted the documentation

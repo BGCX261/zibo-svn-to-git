@@ -1,0 +1,13 @@
+ul#listLocales li {
+	list-style: none;
+	margin-left: 0;
+}
+
+ul#listLocales li span.handle {
+	font-weight: bold;
+	cursor: move;
+}
+
+ul#listLocales li div {
+	margin: 7px 0px 12px 25px;
+}

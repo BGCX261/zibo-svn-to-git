@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zibo.security" default="packageSecurity">
+
+    <property name="phing.command" value="phing" />
+
+	<target name="packageSecurity">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageSecurity" />
+        </exec>
+    </target>
+
+</project>

@@ -1,0 +1,13 @@
+form.data div.permissionsInherit input,
+form.data div.permissionsEverybody input,
+form.data div.permissionsAnonymous input,
+form.data div.permissionsAuthenticated input {
+	width: 16px;
+}
+
+form.data div.permissionsInherit label,
+form.data div.permissionsEverybody label,
+form.data div.permissionsAnonymous label,
+form.data div.permissionsAuthenticated label {
+	display: inline;
+}

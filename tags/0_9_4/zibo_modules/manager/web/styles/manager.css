@@ -1,0 +1,32 @@
+#bodyContainer #managerSidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#managerSidebar ul li {
+    padding: 5px 0px 5px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+#managerSidebar ul li.selected {
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+#managerSidebar ul li.selected ul li {
+    font-weight: normal;
+}
+
+#managerSidebar ul li img {
+    vertical-align: bottom;
+    margin-right: 7px;
+}
+
+#bodyContainer #managerSidebar ul li ul {
+    list-style: disc;
+}
+
+#managerSidebar ul li ul li {
+    margin: 0px 0px 3px 48px;
+    padding: 2px;
+}

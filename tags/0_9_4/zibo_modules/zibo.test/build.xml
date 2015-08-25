@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<project name="zibo.test" basedir="." default="runTests">
+
+    <property file="build.properties" />
+
+    <property name="base.path" value="." override="false" />
+
+    <property name="bootstrap.file" value="${base.path}/bootstrap.php" override="false" />
+
+    <property name="coverage.report.file" value="${base.path}/build/reports/coverage.xml" override="false" />
+    <property name="coverage.report.path" value="${base.path}/build/reports/coverage" override="false" />
+    <property name="coverage.report.style" value="/usr/share/php/data/phing/etc" override="false" />
+
+    <property name="test.report.file" value="phpunit.xml" override="false" />
+    <property name="test.report.path" value="${base.path}/build/reports" override="false" />
+
+    <target name="runTests">
+        <mkdir dir="${test.report.path}" />
+
+        <phpunit bootstrap="${bootstrap.file}" haltonfailure="true" printsummary="true">
+            <formatter outfile="${test.report.file}" todir="${test.report.path}" type="xml"/>
+            <batchtest>
+                <fileset dir="modules">
+                    <include name="**/test/**/*Test.php"/>
+                </fileset>
+                <fileset dir="system/test">
+                    <include name="**/*Test.php"/>
+                </fileset>
+            </batchtest>
+        </phpunit>
+    </target>
+
+    <target name="runTestsWithCodeCoverage">
+        <mkdir dir="${test.report.path}" />
+        <mkdir dir="${coverage.report.path}" />
+
+        <coverage-setup database="${coverage.report.file}">
+            <fileset dir=".">
+                <include name="*.php"/>
+                <exclude name="**/*Test.php"/>
+            </fileset>
+        </coverage-setup>
+
+        <phpunit bootstrap="${bootstrap.file}" haltonfailure="true" printsummary="true" codecoverage="true">
+            <formatter outfile="${test.report.file}" todir="${test.report.path}" type="xml"/>
+            <batchtest>
+                <fileset dir="modules">
+                    <include name="**/test/**/*Test.php"/>
+                </fileset>
+                <fileset dir="system/test">
+                    <include name="**/*Test.php"/>
+                </fileset>
+            </batchtest>
+        </phpunit>
+
+        <coverage-report outfile="${coverage.report.file}">
+            <report styledir="${coverage.report.style}" todir="${coverage.report.path}"/>
+        </coverage-report>
+
+        <phpcodesniffer format="checkstyle" sniffs="Generic_Sniffs_Whitespace_DisallowTabIndentSniff">
+            <fileset dir=".">
+              <exclude name="**/vendor/**" />
+              <include name="**/*.php"/>
+            </fileset>
+
+            <formatter type="checkstyle" outfile="${test.report.path}/checkstyle.xml" />
+        </phpcodesniffer>
+    </target>
+
+</project>

@@ -1,0 +1,1 @@
+<h{$level}{if $styleId} id="{$styleId}"{/if}{if $styleClass} class="{$styleClass}"{/if}>{$title}</h{$level}>

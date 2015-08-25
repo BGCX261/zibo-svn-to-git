@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zibo.smarty" default="packageSmarty">
+
+    <property name="phing.command" value="phing" />
+
+	<target name="packageSmarty">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageSmarty" />
+        </exec>
+    </target>
+
+</project>

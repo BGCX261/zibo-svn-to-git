@@ -1,0 +1,10 @@
+Zibo Configuration
+------------------
+database.connection.[name]
+database.connection.default
+database.driver.[protocol]
+database.[protocol].types.[name]
+
+PHPUnit Tests:
+--------------
+You can use the zibo_test project in the zibo svn on http://zibo.googlcode.com

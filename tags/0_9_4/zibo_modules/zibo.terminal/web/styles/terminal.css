@@ -1,0 +1,57 @@
+#formTerminal {
+	display: block;
+	height: 400px;
+	width: 100%;
+	background-color: #000;
+	color: #FFF;
+	padding: 5px;
+}
+
+#formTerminalCommand {
+	background-color: #000;
+	color: #FFF;
+    border: 0;
+    font-family: monospace;
+    font-size: 1em;
+    padding: 0 0 0 0.05em;
+    margin: 0;
+    height: 10px;
+    width: 300px;
+}
+
+#formTerminal span {
+    display: inline;
+}
+
+#formTerminal div.result {
+	max-height: 380px;
+	padding: 0;
+	margin: 0;
+	overflow: auto;
+}
+
+#formTerminal pre.result {
+	line-height: 130%;
+	white-space: pre-wrap; /* css-3 */
+	white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	word-wrap: break-word; /* Internet Explorer 5.5+ */	
+}
+
+#formTerminal div.bash {
+}
+	
+#formTerminal pre.bash {
+	display: inline;
+}
+
+#formTerminal span.path {
+	font-size: 100%;
+	color: #0F3;
+}
+
+#formTerminal .error {
+	color: #F00;
+	font-size: 1em;
+}

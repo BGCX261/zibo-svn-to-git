@@ -1,0 +1,104 @@
+#summary The configuration system explained.
+
+= Introduction =
+
+The configuration of Zibo is achieved through a set of key-value pairs. A key has at least 2 parts. The parts of a key are separated with a _._ (dot). 
+
+= Details =
+
+== Get a configuration value ==
+Some examples, assume the following configuration:
+{{{
+mail.recipient.john = john@gmail.com
+mail.recipient.mark = mark@gmail.com
+mail.recipient.sarah = sarah@gmail.com
+system.memory = 8M
+}}}
+
+Example to get a configuration value.
+{{{
+$value1 = $zibo->getConfigValue('system.memory');
+$value2 = $zibo->getConfigValue('unexistant.configuration.key');
+
+// $value1 = '8M'
+// $value2 = null
+}}}
+
+You can pass a default value. When the configuration value is not set, the default value will be returned.
+{{{
+$default = 'Default value';
+$value = $zibo->getConfigValue('unexistant.configuration.key', $default);
+
+// $value = 'Default value';
+}}}
+
+The configuration can also act as a configuration tree. You can get an array with the recipients:
+{{{
+$recipients = $zibo->getConfigValue('mail.recipient');
+
+// $recipients = array(
+//     'john' => 'john@gmail.com',
+//     'mark' => 'mark@gmail.com',
+//     'sarah' => 'sarah@gmail.com'
+// )
+}}}
+
+== Set a configuration value ==
+Assume the following configuration:
+{{{
+mail.recipient = john@gmail.com
+system.memory = 8M
+}}}
+
+And the following code:
+{{{
+$recipients = array(
+    'john' => 'john@gmail.com',
+    'mark' => 'mark@gmail.com',
+    'sarah' => 'sarah@gmail.com',
+);
+
+$zibo->setConfigValue('mail.recipient', $recipients);
+$zibo->setConfigValue('system.memory', '16M');
+}}}
+
+This code will set the configuration to the following:
+{{{
+mail.recipient.john = john@gmail.com
+mail.recipient.mark = mark@gmail.com
+mail.recipient.sarah = sarah@gmail.com
+system.memory = 16M
+}}}
+
+== Configuration storage ==
+By default, Zibo uses ini files to store the configuration. The first part of the configuration key defines the filename. When you save the configuration key _mail.recipient.john_, your value will be saved in _application/config/mail.ini_.
+
+When you retrieve the configuration key _mail.recipient.john_, Zibo will look from system, through modules, up to application for _config/mail.ini_. The last value found will be returned. This way, a key in application will override the same key in modules or system.
+
+Assume the following configuration:
+{{{
+mail.recipient.john = john@gmail.com
+mail.recipient.mark = mark@gmail.com
+mail.recipient.sarah = sarah@gmail.com
+system.memory = 8M
+}}}
+
+This is stored in 2 files:
+{{{
+recipient.john = john@gmail.com
+recipient.mark = mark@gmail.com
+recipient.sarah = sarah@gmail.com
+}}}
+
+and _system.ini_
+{{{
+memory = 8M
+}}}
+
+_mail.ini_ can also be rewritten like: 
+{{{
+[recipient]
+john = john@gmail.com
+mark = mark@gmail.com
+sarah = sarah@gmail.com
+}}}

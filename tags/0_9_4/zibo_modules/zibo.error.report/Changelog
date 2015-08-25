@@ -1,0 +1,9 @@
+Version 0.3.0
+-------------
+* ReportView: applied name change of AdminView to BaseView
+* build.xml: updated phar task
+
+Version 0.2.0
+-------------
+* ReportView: use full path for the style
+* report.tpl: moved the submit button above the error report

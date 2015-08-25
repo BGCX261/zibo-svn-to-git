@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zibo.validation" default="packageValidation">
+
+    <property name="phing.command" value="phing" />
+
+	<target name="packageValidation">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageValidation" />
+        </exec>
+    </target>
+
+</project>

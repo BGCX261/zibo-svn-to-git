@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zibo.diagram" default="packageDiagram">
+
+    <property name="phing.command" value="phing" />
+
+	<target name="packageDiagram">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageDiagram" />
+        </exec>
+    </target>
+
+</project>

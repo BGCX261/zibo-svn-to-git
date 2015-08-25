@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+    <route path="admin/modules/repository" controller="zibo\repository\controller\ClientController" />
+</routes>

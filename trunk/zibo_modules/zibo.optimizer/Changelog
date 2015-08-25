@@ -1,0 +1,7 @@
+- updated API documentation
+- CSSOptimizer: cache the images used in the css
+- CssOptimizer: update all url declarations in the css so the css works same way on the cached location
+- CssOptimizer: using filesystem\Browser to find files on the filesystem
+- AbstractOptimizer: cache files to application/public to get a better response time since this directory is directly hosted
+- AbstractOptimizer: changed method signature of optimizeSource($source) to optimizeSource($source, File $file)
+- AbstractOptimizer: using filesystem\Browser to find files on the filesystem

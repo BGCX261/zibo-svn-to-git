@@ -1,0 +1,3 @@
+* set referer when addAction is called in ScaffoldController
+* added url to defineAction in ModelIndexView
+* removed usage of I18n->hasLocale and I18n->getLocaleCodeList 

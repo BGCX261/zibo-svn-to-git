@@ -1,0 +1,15 @@
+- Autoloader: added getModuleScripts, while getting the include paths, it will check and keep a list of the module scripts (src/index.php)
+- Browser: added function processFiles
+- DateTime: added HOUR and DAY constant (value in seconds)
+- EventManager: added function runEventWithArrayArguments and use this in Zibo
+- File: rewrote passthru, now a file of more then 50mb can be hosted with 2mb of memory
+- Request: added function getParametersAsString
+- XmlIO: added cache and implemented new way to validate the dom, using filesystem browser to find and read the route files
+- View: render get an optional boolean parameter return, default true
+- Zibo: get module scripts through the Autoloader
+- Zibo: added DIRECTORY_CACHE and DIRECTORY_PUBLIC constant
+- Zibo: added EVENT_CLEAR_CACHE and method clearCache which will run the event
+- Zibo: renders it's view directly to the browser
+- .htaccess: implemented application/public directory to be hosted directly by apache
+- added favicon.ico
+- added Changelog

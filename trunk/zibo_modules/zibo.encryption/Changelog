@@ -1,0 +1,3 @@
+* moved the HashAlgorithms (plain, md5 and sha1) from the security module to this one
+* implemented Vigenere encryption
+* added Cipher interface

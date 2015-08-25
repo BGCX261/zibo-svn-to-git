@@ -1,0 +1,133 @@
+#formSiteSelect {
+	margin-bottom: 18px;
+}
+
+#formSiteSelect select {
+	float: left;
+	margin-right: 12px;
+}
+
+#formSiteSelect ul.actionMenu {
+	padding-top: 5px;
+}
+
+#createMenu {
+	padding-top: 7px;
+}
+
+a.actionMenu {
+    background: url(../../images/joppa/arrow.down.blue.png) no-repeat 93% center;
+    padding: 0px 12px 0px 3px;
+	border: 1px solid #F7F7F7;
+}
+
+a.actionMenuNode {
+    background: url(../../images/joppa/arrow.down.blue.png) no-repeat center center;
+    padding: 0 0 0px 9px;
+    display: inline;
+	border: 1px solid #F7F7F7;
+	margin-left: 1px;
+}
+
+a.actionMenu:hover,
+a.actionMenuNode:hover {
+	border: 1px solid #BBB;
+}
+
+#createMenuActions {
+	margin-top: 7px;
+}
+#sidebar .contextMenu li a {
+	color: #333;
+}
+
+.contextMenu li a.advanced { background-image: url(../../images/joppa/advanced.png); }
+.contextMenu li a.content { background-image: url(../../images/joppa/content.png); }
+.contextMenu li a.copy { background-image: url(../../images/joppa/copy.png); }
+.contextMenu li a.delete { background-image: url(../../images/joppa/delete.png); }
+.contextMenu li a.edit { background-image: url(../../images/joppa/edit.png); }
+.contextMenu li a.folder { background-image: url(../../images/joppa/folder.png); }
+.contextMenu li a.go { background-image: url(../../images/joppa/go.png); }
+.contextMenu li a.page { background-image: url(../../images/joppa/page.png); }
+.contextMenu li a.properties { background-image: url(../../images/joppa/edit.png); }
+.contextMenu li a.site { background-image: url(../../images/joppa/site.png); }
+.contextMenu li a.visibility { background-image: url(../../images/joppa/visibility.png); }
+
+#nodeTree {
+    margin-top: 12px;
+}
+
+.placeholder {          
+    display: block;
+    border: 1px dotted #666;
+    background-color: #DDD; 
+    height: 15px;
+} 
+
+#nodeTree li.node {
+    padding-top: 2px;
+    list-style: none;
+    margin-left: 0px;
+    margin-bottom: 7px;
+}
+
+#nodeTree li.node .toggle {
+	display: block;
+	float: left;
+	width: 16px;
+	height: 16px;
+}
+
+#nodeTree li.unlocalized a.name {
+	color: #75778f;
+}
+
+#nodeTree li.unlocalized ul.children li.localized a.name {
+    color: #373C8F;
+}
+
+#nodeTree li.node a.toggle {
+	background: url(../../images/joppa/toggle.minus.png) no-repeat;
+}
+
+#nodeTree li.closed a.toggle {
+	background: url(../../images/joppa/toggle.plus.png) no-repeat;
+}
+
+#nodeTree li.node ul.empty {
+    display: none;
+}
+
+#nodeTree li.node ul.children {
+    margin-top: 7px;
+}
+
+#nodeTree li.closed ul.children {
+	display: none;
+}
+	
+#nodeTree li.node ul.children li.node {
+    margin-left: 19px;
+}
+
+#nodeTree li.node div.handle {
+    background-repeat: no-repeat;
+    cursor: move;
+    float: left;
+    margin: -2px 3px 0 0;
+}
+
+#nodeTree li a.actionMenu {
+}
+	
+#nodeTree li.selected .name {
+	font-weight: bold;
+}
+
+#nodeTree li.selected li .name {
+	font-weight: normal;
+}
+
+#nodeTree li.node div.menu {
+    display: inline;
+}

@@ -1,0 +1,16 @@
+#xmlrpcClient div.request pre,
+#xmlrpcClient div.response pre {
+    margin-bottom: 18px;
+}
+
+#xmlrpcClient div.result {
+    padding-bottom: 18px;
+}
+	
+#xmlrpcClient div.result .error {
+	color: #CF2E2E;
+}
+
+#xmlrpcClient form.data #formXmlrpcClientParameters {
+	height: 50px;
+}

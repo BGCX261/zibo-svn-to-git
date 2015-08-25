@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<models>
+    <model name="Continent" modelClass="zibo\library\orm\model\ContinentModel" dataClass="zibo\library\orm\model\data\ContinentData" group="zibo.country">
+        <field name="code" type="string">
+            <validation name="required" />
+        </field>
+        <field name="name" type="string" localized="true">
+            <validation name="required" />
+        </field>
+        <field name="countries" model="Country" relation="hasMany" relationOrder="{name} ASC"/>
+
+        <index name="code">
+            <indexField name="code" />
+        </index>
+
+        <format name="title">{name}</format>
+        <format name="teaser">{code}</format>
+    </model>    
+    <model name="Country" modelClass="zibo\library\orm\model\CountryModel" dataClass="zibo\library\orm\model\data\CountryData" group="zibo.country">
+        <field name="code" type="string">
+            <validation name="required" />
+        </field>
+        <field name="name" type="string" localized="true">
+            <validation name="required" />
+        </field>
+        <field name="continent" model="Continent" relation="belongsTo" />
+
+        <index name="code">
+            <indexField name="code" />
+        </index>
+
+        <format name="title">{name}</format>
+        <format name="teaser">{code} ({continent})</format>
+    </model>
+</models>

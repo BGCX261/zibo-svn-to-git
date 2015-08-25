@@ -1,0 +1,16 @@
+This is the readme for the Phing tasks needed to build modules for Zibo.
+
+Installing the tasks
+--------------------
+- copy or link the php files from the tasks directory to <phing-directory>/tasks/ext
+  (eg. /usr/share/php/phing/tasks/ext)
+- add the following lines to the task definition file (eg. /usr/share/php/data/phing/tasks/defaults.properties)
+
+    modulenameproperty=phing.tasks.ext.ModuleNamePropertyTask
+    moduleversionproperty=phing.tasks.ext.ModuleVersionPropertyTask
+    
+That's it, happy building!
+
+PS: Don't forget your php settings (eg./etc/php5/cli/php.ini)
+    
+    phar.readonly = Off

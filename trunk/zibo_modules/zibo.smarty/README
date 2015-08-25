@@ -1,0 +1,9 @@
+Zibo Configuration:
+-------------------
+smarty.compile.directory
+smarty.plugin.[name]
+
+Updating Smarty
+---------------
+- rename class from file names so you get Smarty.php, Smarty_Compiler.php and Config_File.php
+- in Smarty.php, change the variable $compiler_file from 'Smarty_Compiler.class.php' to 'Smarty_Compiler.php' (around line 386)

@@ -1,0 +1,36 @@
+#summary Overview of the directory structure
+#labels directorystructure
+
+= Directory Structure =
+
+== Installation Directory Structure ==
+
+The directory structure of a Zibo installation looks like:
+
+  * application
+    * <package structure>
+  * modules
+    * module
+      * <package structure>
+    * module.phar
+      * <package structure>
+    * ...
+  * system
+    * <package structure>
+
+  * application: everything for your application comes in this directory according to the package directory structure. The files in this directory will override the ones in modules or system.
+  * modules: all extensions on the core, needed for your application, come in here. This can be a directory or a phar file with the package directory structure inside.
+  * system: everything needed to get Zibo running will be in this directory according to the package directory structure.
+
+== Package Directory Structure ==
+
+The directory structure of your application, a module and the core should look like the following if applicable:
+
+  * config: configuration files
+  * data: data files needed by the implementation
+  * l10n: localization files (translations)
+  * log: log files (only in application)
+  * public: files hosted directly by the webserver (only in application)
+  * src: sources of the implementation
+  * view: templates of the views
+  * web: all files open to the world

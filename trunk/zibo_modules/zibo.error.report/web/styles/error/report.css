@@ -1,0 +1,13 @@
+#formReportError div.report pre,
+#formReportError div.comment textarea {
+    width: 80%;
+}
+
+#formReportError div.report pre {
+    height: 150px;
+    overflow: scroll;
+    
+    padding: 7px;
+    
+    background-color: #F3F3F3;
+}

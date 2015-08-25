@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zibo.soap.curl" default="packageSoapCurl">
+
+    <property name="phing.command" value="phing" />
+
+	<target name="packageSoapCurl">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageSoapCurl" />
+        </exec>
+    </target>
+
+</project>

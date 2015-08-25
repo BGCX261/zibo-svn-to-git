@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zibo.xmlrpc" default="packageXmlrpc">
+
+    <property name="phing.command" value="phing" />
+
+    <target name="packageXmlrpc">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageXmlrpc" />
+        </exec>
+    </target>
+
+</project>

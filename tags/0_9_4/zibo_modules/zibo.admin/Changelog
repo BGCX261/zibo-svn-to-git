@@ -1,0 +1,25 @@
+- System: made anchors of the routes
+
+- IndexController: use the abstract controller more
+- AbstractController: cleaned up, documented. Rewrote the forward method and added setError404 method 
+- Module: if the route is secured, clear the request before going to the authentication form
+- AdminView: create a config of the default title
+
+- AdminView: cleaned up a bit, added taskbar and sidebar implementation
+- DownloadView: added cache control and remove all dots from the filename except for the extension dot for IE compatibility
+- FileView: implemented passthru to reduce memory usage when hosting large files
+- function.head.php: modified so this will take external links to styles and scripts 
+- SystemController: cleaned up a bit, added action clearCache and phpInfo
+- ModulesController: cleaned up a bit
+- IndexController: implemented error 404
+- added 404 view
+- restructured the views and set full relative path for styles and scripts
+- removed AdminModule
+- added sidebar api
+- reworked the taskbar
+
+- clear referer session variable when logging out
+- add parameters to referer
+- using LocaleField in LocalizePanelForm
+- friendly error when exception occurs when uninstalling a module
+- removed hide timeout from information messages

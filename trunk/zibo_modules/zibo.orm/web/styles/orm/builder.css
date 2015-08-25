@@ -1,0 +1,12 @@
+#formModelFilter div label {
+	display: inline;
+}
+
+#formModelFieldOrder,
+#modelDetail div.basicInfo {
+	margin-bottom: 24px;
+}
+
+#modelDetail table img.handle {
+	cursor: move;
+}

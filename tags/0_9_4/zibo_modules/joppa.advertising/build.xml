@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<project name="joppa.advertising" basedir="." default="packageJoppaAdvertising">
+	<property file="build.properties" />
+	<property name="build.path" value="build" override="false" />
+
+	<target name="packageJoppaAdvertising">
+		<modulenameproperty name="build.name" source="module.xml" />
+		<moduleversionproperty name="build.version" source="module.xml" />
+		<property name="build.file" value="${build.path}/${build.name}-${build.version}.phar" />
+
+		<delete file="${build.file}" />
+
+		<pharpackage destfile="${build.file}" basedir=".">
+            <fileset dir=".">
+                <include name="config/**" />
+                <include name="l10n/**" />
+                <include name="src/**" />
+                <include name="view/**" />
+                <include name="web/**" />
+                <include name="module.xml" />
+                <include name="README" />
+                <exclude name="**.svn**" />
+            </fileset>
+			<metadata />
+		</pharpackage>
+	</target>
+</project>

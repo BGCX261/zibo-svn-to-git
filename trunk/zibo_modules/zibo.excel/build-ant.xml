@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zibo.excel" default="packageExcel">
+
+    <property name="phing.command" value="phing" />
+
+	<target name="packageExcel">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageExcel" />
+        </exec>
+    </target>
+
+</project>

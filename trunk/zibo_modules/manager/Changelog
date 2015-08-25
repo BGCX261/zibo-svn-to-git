@@ -1,0 +1,6 @@
+- updated API documentation
+- implemented the sidebar
+- restructered and cleaned up the manager code
+- Module: using the taskbar event to add the managers to the view
+- ManagerView: use full path for the style and changed setView to setSubview
+- ManagerModel: renamed getManagerMenu to getManagerMenuActions

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<models>
+    <model name="Advertisement" modelClass="joppa\advertising\model\AdvertisementModel" dataClass="joppa\advertising\model\data\AdvertisementData">
+        <field name="name" type="string" label="joppa.advertising.label.name">
+            <validation name="required" />
+        </field>
+        <field name="website" type="string" label="joppa.advertising.label.website">
+            <validation name="website" />
+        </field>
+        <field name="image" type="image" label="joppa.advertising.label.image">
+            <validation name="required" />
+        </field>
+        <field name="dateStart" type="date" label="joppa.advertising.label.date.start">
+            <validation name="required" />
+        </field>
+        <field name="dateStop" type="date" label="joppa.advertising.label.date.stop">
+            <validation name="required" />
+        </field>
+        <field name="blocks" model="AdvertisementBlock" relation="hasMany" label="joppa.advertising.label.blocks" />
+        <field name="clicks" type="integer" label="joppa.advertising.label.clicks" />
+        <field name="version" type="integer" />
+        
+        <format name="title">{name}</format>
+        <format name="teaser">{website}</format>
+        <format name="image">{image}</format>
+    </model>    
+    <model name="AdvertisementBlock" modelClass="joppa\advertising\model\AdvertisementBlockModel" dataClass="joppa\advertising\model\data\AdvertisementBlockData">
+        <field name="name" type="string" label="joppa.advertising.label.block.name">
+            <validation name="required" />
+        </field>
+        <field name="advertisements" model="Advertisement" relation="hasMany" />
+        <field name="version" type="integer" />
+        
+        <format name="title">{name}</format>
+    </model>    
+</models>

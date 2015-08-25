@@ -1,0 +1,13 @@
+#formTextPropertiesText {
+	width: 100%;
+	height: 350px;
+}
+
+ul.historyMore {
+	display: none;
+}
+
+ul.historyMore li.selected,
+ul.history li.selected {
+	font-weight: bold;
+}

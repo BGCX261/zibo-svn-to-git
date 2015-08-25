@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zibo.tokenizer" default="packageTokenizer">
+
+    <property name="phing.command" value="phing" />
+
+	<target name="packageTokenizer">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageTokenizer" />
+        </exec>
+    </target>
+
+</project>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zibo.opcache" default="packageOpCache">
+
+    <property name="phing.command" value="phing" />
+
+    <target name="packageOpCache">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageOpCache" />
+        </exec>
+    </target>
+
+</project>

@@ -1,0 +1,91 @@
+form.data div {
+	margin-bottom: 12px;
+}
+
+form.data div.column1,
+form.data div.column2 {
+    width: 47%;
+    float: left;
+    margin-bottom: 0;
+}
+
+form.data div.column1 {
+    margin-right: 18px;
+}
+
+form.data div label {
+	display: block;
+	margin-bottom: 3px;
+}
+
+form.data div span {
+	clear: both;
+	display: block;
+	font-size: 80%;
+	color: #777;
+	margin-bottom: 9px;
+	line-height: 130%;
+}
+
+form.data div span.image img {
+	padding: 3px;
+	border: 1px solid #CCC;
+}
+
+
+form.data div input,
+form.data div textarea, 
+form.data div select {
+	width: 300px;
+	margin-bottom: 5px;
+}
+
+form.data div textarea {
+    width: 100%;
+    height: 150px;
+}
+
+form.data div select {
+    max-height: 100px;
+}
+
+form.data div input[type=radio],
+form.data div input[type=checkbox] {
+	border: 0;
+	width: 12px;
+}
+
+form.data div input[type=submit],
+form.data div input[type=reset],
+form.data div input[type=button],
+form.data div input[type=file] {
+    width: auto;
+}
+
+form.data div.option label {
+	display: inline;
+}
+
+form.data div.optionField {
+	padding-left: 30px;
+}
+
+form.data div.submit {
+	margin-top: 24px;	
+}
+
+form.data div.submit input {
+    padding: 0 12px 0 12px;
+	width: auto;
+}
+
+form.data input.error,
+form.data select.error,
+form.data textarea.error {
+	border: 1px solid #cf2e2e;
+}
+
+form.data ul.errors {
+	color: #cf2e2e;
+	margin-bottom: 0px;
+}

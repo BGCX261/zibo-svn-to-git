@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+    <route path="admin/orm/log" controller="zibo\orm\log\controller\LogController" />
+    <route path="admin/orm/models" controller="zibo\orm\builder\controller\BuilderController" />
+    <route path="admin/orm/models/wizard" controller="zibo\orm\builder\controller\WizardController" />
+    <route path="ajax/orm/log" controller="zibo\orm\scaffold\controller\LogController" />
+</routes>

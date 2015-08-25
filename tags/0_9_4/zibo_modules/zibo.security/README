@@ -1,0 +1,5 @@
+Zibo Configuration:
+-------------------
+security.authenticator
+security.model
+security.password.hash

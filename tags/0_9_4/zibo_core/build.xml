@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<project name="zibo" basedir="." default="packageCore">
+
+	<property file="build.properties" />
+		
+    <property name="build.path" value="build" override="false" />
+    <property name="build.name" value="zibo" override="false" />
+    <property name="build.file" value="${build.path}/${build.name}.zip" override="false" />
+	
+    <target name="packageCore">
+        <delete file="${build.file}" />        
+        <zip destfile="${build.file}" basedir=".">
+            <fileset dir=".">
+                <include name="system/config/**/**" />
+                <include name="system/src/**/**" />
+                <include name=".htaccess" />
+                <include name="Changelog" />
+                <include name="bootstrap.php" />
+                <include name="favicon.ico" />
+                <include name="index.php" />
+                <include name="README" />
+                <exclude name="**.svn**" />
+            </fileset>
+        </zip>
+    </target>
+
+</project>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zibo.notify" default="packageNotify">
+
+    <property name="phing.command" value="phing" />
+
+	<target name="packageNotify">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageNotify" />
+        </exec>
+    </target>
+
+</project>

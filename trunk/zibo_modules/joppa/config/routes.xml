@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+    <route path="admin/joppa" controller="joppa\controller\backend\SettingsController" />
+    <route path="ajax/joppa/tree" controller="joppa\controller\backend\AjaxTreeController" />
+    <route path="pages" controller="joppa\controller\backend\IndexController" />
+    <route path="pages/folder" controller="joppa\controller\backend\FolderController" />
+    <route path="pages/node" controller="joppa\controller\backend\NodeController" />
+    <route path="pages/page" controller="joppa\controller\backend\PageController" />
+    <route path="pages/site" controller="joppa\controller\backend\SiteController" />
+</routes>

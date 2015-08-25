@@ -1,0 +1,11 @@
+* fixed path issues when overriding the root path
+* finished sort implementation
+* moved upload file and clipboard to the sidebar
+* added multiple file upload
+
+* Cleaned up the code and added API documentation
+* Removed the path from the session
+
+* UploadForm: implemented willOverwrite so that you always overwrite the files when using the filebrowser
+* BaseView: need full path for the style, added web directory in front of the style path 
+* Module: using new taskbar api

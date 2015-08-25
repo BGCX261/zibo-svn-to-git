@@ -1,0 +1,48 @@
+#editor form {
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+#editor form textarea {
+    height: 350px;
+    width: 100%;
+}
+
+#editor form #formEditorExtension {
+    width: auto;
+}
+
+#fileBrowser ul.actions li {
+    display: inline;
+    margin: 0 12px 0 0;
+}
+
+#fileBrowser table td div.name {
+    background-repeat: no-repeat;
+    height: 20px;
+    padding-left: 20px;
+}
+
+#fileBrowser table td div.directory {
+    background-image: url(../../images/directory.png);
+}
+
+#fileBrowser table td div.file {
+    background-image: url(../../images/file.png);
+}
+
+#fileBrowser table td div.info span {
+    display: block;
+}
+
+#formUpload div.submit {
+	margin-top: 0px;
+}
+
+.clipboard form.list div.actions {
+	width: 100%;
+}
+
+.clipboard form.list table.list {
+	margin-top: 0;
+}

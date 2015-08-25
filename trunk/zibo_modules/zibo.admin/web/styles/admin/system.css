@@ -1,0 +1,36 @@
+table.settings {
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+table.settings tr.even {
+    background-color: #F7F7F7;
+}
+
+table.settings tr td {
+    padding: 2px;
+}
+
+table.settings tr td.none,
+table.settings tr td.key {
+    color: #555;    
+}
+
+table.settings tr td.key {
+    width: 250px;
+}
+
+ul li table.settings {
+    display: none;
+    margin-bottom: 0px;
+}
+
+div.ziboConfiguration {
+    margin-bottom: 20px;    
+}
+
+#ziboConfigurationData {
+	height: 200px;
+	overflow: auto;
+    display: none;
+}

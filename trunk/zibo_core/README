@@ -1,0 +1,42 @@
+Zibo Configuration:
+-------------------
+config.cache.enabled
+mime.[extension]
+schema.routes
+system.memory
+system.router.io
+system.session.path
+system.session.time
+system.timezone
+system.url
+
+Zibo Events:
+------------
+dispatcher.dispatch.post
+dispatcher.dispatch.pre
+log
+system.cache.clear
+system.dispatch.post
+system.dispatch.pre
+system.error
+system.reponse.post
+system.response.pre
+system.route.post
+system.route.pre
+
+PHPUnit Tests:
+--------------
+You can use the zibo_test project in the zibo svn on http://zibo.googlcode.com
+
+To ensure your core tests succeed, follow these steps:
+
+chmod 777 system/test/data/filesystem/writable
+chmod 000 system/test/data/filesystem/unreadable
+chmod 777 system/test/data/filesystem
+
+cd [test-project]
+mkdir application
+mkdir application/config
+chmod 777 application/config
+
+cp [zibo-project]system/test/config/*ini [test-project]application/config

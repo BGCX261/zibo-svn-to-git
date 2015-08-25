@@ -1,0 +1,26 @@
+Version 0.3.1
+-------------
+* set page title
+
+Version 0.3.0
+-------------
+* improved parsing of variable types
+* implemented the admin sidebar
+* updated API documentation
+* show todos for properties and class 
+* show deprecated status 
+* class.tpl: Don't display private methods of parent classes
+
+Version 0.2.0
+-------------
+* make search actions bookmarkable
+* when a search yields only 1 result, go straight to the result
+* added error message when a class is not found
+* gave the class view more love and included the parsed PhpDoc
+* added DocParser to parse the PhpDoc
+
+Version 0.1.1
+-------------
+* Module: using the taskbar event to add the managers to the view
+* ReflectionMethod: prefix a variable with $ in getParameterString
+* BaseView: use full path for the style

@@ -1,0 +1,95 @@
+div#dashboard p.addAction {
+	text-align: right;
+}
+
+div#dashboard div.column {
+    padding-bottom: 24px;
+    float: left;
+/*    width: 30%;
+    margin-right: 12px;*/
+}
+
+div#dashboard div.column div.placeholder {
+    border: 2px dashed #CCC;;
+}
+
+div#dashboard div.column div.placeholder,
+div#dashboard div.column div.widget {
+    margin-bottom: 12px;
+}
+
+div#dashboard div.column div.widget {
+    border: 1px solid #CCC;
+}
+
+div#dashboard div.column div.widget div.titleBar {
+	background-color: #EEE;
+    padding: 5px;
+    color: #777;
+    cursor: move;
+}
+
+div#dashboard div.column div.widget div.titleBar a {
+	color: #777;
+}
+
+div#dashboard div.column div.widget div.titleBar div.buttons {
+	float: left;
+}
+div#dashboard div.column div.widget div.titleBar div.buttons {
+	margin-top: -1px;
+	float: right;
+	width: 40px;
+}
+
+div#dashboard div.column div.widget div.titleBar div.buttons a {
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	display: block;
+	float: right;
+	margin-left: 2px;
+	height: 16px;	
+	width: 16px;
+}
+
+div#dashboard div.column div.widget div.titleBar div.buttons a:hover {
+	background-position: 0 100%;
+}
+
+div#dashboard div.column div.widget div.titleBar div.buttons a.properties {
+	background-image: url(../../images/dashboard/button.properties.gif);
+}
+
+div#dashboard div.column div.widget div.titleBar div.buttons a.minimize {
+	background-image: url(../../images/dashboard/button.minimize.gif);
+}
+
+div#dashboard div.column div.widget div.titleBar div.buttons a.maximize {
+	background-image: url(../../images/dashboard/button.maximize.gif);
+}
+
+div#dashboard div.column div.widget div.titleBar div.buttons a.close {
+	background-image: url(../../images/dashboard/button.close.gif);
+}
+
+div#dashboard div.column div.widget div.content {
+    border-top: 1px solid #CCC;
+	padding: 7px;
+}
+
+div#dashboard div.widgetAdd div.widget {
+	margin-bottom: 24px;
+}
+
+div#dashboard div.widgetAdd div.widget div.name {
+	margin-bottom: 7px;
+}
+
+div#dashboard div.widgetAdd div.widget div.name img {
+	vertical-align: bottom;
+}
+
+div#dashboard div.widgetAdd div.widget div.success {
+	margin-top: 7px;
+	color: green;
+}

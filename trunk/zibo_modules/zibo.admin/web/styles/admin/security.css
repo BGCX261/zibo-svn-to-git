@@ -1,0 +1,35 @@
+#formSecurity table {
+    margin-bottom: 24px;
+}
+
+#formSecurity div.allowedRoutes,
+#formSecurity div.deniedRoutes,
+#formSecurity div.submit {
+    margin-bottom: 12px;
+}
+
+#formSecurity div.allowedRoutes label,
+#formSecurity div.deniedRoutes label {
+    display: block;
+    margin-bottom: 3px;
+}
+
+#formSecurity div.allowedRoutes span,
+#formSecurity div.deniedRoutes span {
+    clear: both;
+    display: block;
+    font-size: 80%;
+    color: #777;
+    margin-bottom: 9px;
+}
+
+#formSecurity div.allowedRoutes textarea,
+#formSecurity div.deniedRoutes textarea {
+    width: 400px;
+    height: 125px;
+    margin-bottom: 5px;
+}
+
+#formSecurity div.allowedRoutes ul li div {
+    display: none;
+}

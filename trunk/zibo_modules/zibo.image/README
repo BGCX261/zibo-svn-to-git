@@ -1,0 +1,13 @@
+Zibo Configuration:
+-------------------
+i18n.default
+i18n.negotiator
+i18n.reader
+l10n.[locale].format.date.[name]
+l10n.[locale].name
+l10n.[locale].native
+l10n.[locale].plural
+
+PHPUnit Tests:
+--------------
+You can use the zibo_test project in the zibo svn on http://zibo.googlcode.com

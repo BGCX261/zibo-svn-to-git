@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+	datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+
+	<include href="orm_common.rng" />
+
+	<start>
+		<element name="models">
+			<oneOrMore>
+				<element name="model">
+					<ref name="attlist.model" />
+					<oneOrMore>
+						<ref name="field" />
+					</oneOrMore>
+                    <zeroOrMore>
+						<ref name="index" />
+					</zeroOrMore>
+                    <zeroOrMore>
+                        <ref name="format" />
+                    </zeroOrMore>         
+				</element>
+			</oneOrMore>
+		</element>
+	</start>
+
+	<define name="attlist.model">
+		<group>
+			<attribute name="name">
+				<text />
+			</attribute>
+			<optional>
+				<attribute name="modelClass">
+					<text />
+				</attribute>
+			</optional>
+			<optional>
+				<attribute name="dataClass">
+					<text />
+				</attribute>
+			</optional>
+			<optional>
+				<attribute name="group">
+					<text />
+				</attribute>
+			</optional>
+			<optional>
+				<attribute name="log">
+					<choice>
+						<value>true</value>
+						<value>false</value>
+					</choice>
+				</attribute>
+			</optional>
+			<optional>
+				<attribute name="willBlockDeleteWhenUsed">
+					<choice>
+						<value>true</value>
+						<value>false</value>
+					</choice>
+				</attribute>
+			</optional>
+		</group>
+	</define>
+
+</grammar>

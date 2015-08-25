@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<models>
+    <!-- no relation -->
+    <model name="Single">
+        <field name="name" type="string" />
+        <field name="description" type="string" />
+        
+        <index name="index">
+            <indexField name="name" />
+            <indexField name="description" />
+        </index>
+        
+        <format name="title">{name}</format>
+        <format name="teaser">{description}</format>
+    </model>
+	<!-- HasMany -->
+	<model name="Blog">
+        <field name="title" type="string" />
+        <field name="text" type="text" />
+		<field name="comments" model="BlogComment" relation="hasMany" dependant="true" />
+	</model>
+	<!-- BelongsTo -->
+	<model name="BlogComment">
+		<field name="blog" model="Blog" relation="belongsTo" />
+		<field name="name" type="string" />
+		<field name="email" type="string" />
+        <field name="comment" type="text" />
+	</model>
+	<!-- HasOne -->
+    <model name="User">
+        <field name="username" type="string">
+            <validation name="required" />
+        </field>
+        <field name="password" type="string">
+            <validation name="required" />
+            <validation name="size">
+                <parameter name="minimum" value="5" />
+            </validation>
+	   </field>
+	   <field name="profile" model="Profile" relation="hasOne" />
+	</model>
+	<model name="Profile">
+	   <field name="user" model="User" relation="belongsTo" />
+	   <field name="extra" type="string">
+            <validation name="numeric" />
+	   </field>
+	</model>
+	<!-- hasManyAndBelongsToMany -->
+	<model name="Role">
+		<field name="name" type="string" />
+		<field name="permissions" model="Permission" relation="hasMany" />
+	</model>
+	<model name="Permission">
+		<field name="name" type="string" />
+		<field name="roles" model="Role" relation="hasMany" />
+	</model>
+    <!-- hasManyAndBelongsToSelf -->
+	<model name="Node">
+		<field name="name" type="string" />
+		<field name="parent" model="Node" relation="belongsTo" />
+		<field name="children" model="Node" relation="hasMany" />
+	</model>
+	<!-- insert, update and delete -->
+	<model name="Modify">
+        <field name="name" type="string" />
+        <field name="parent" model="Single" relation="belongsTo" />
+        <field name="children" model="Modify" relation="hasMany" />
+	</model>
+	<model name="Category">
+        <field name="code" type="string" />
+        <field name="name" type="string" localized="true" />
+        <field name="description" type="text" localized="true" />
+        <field name="singles" model="CategorySingle" relation="hasMany" localized="true" /> 
+	</model>	
+	<model name="CategorySingle">
+        <field name="code" type="string" />
+        <field name="category" model="Category" relation="belongsTo" localized="true" />
+	</model>
+</models>

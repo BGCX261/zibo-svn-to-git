@@ -1,0 +1,12 @@
+Zibo Configuration:
+-------------------
+filebrowser.path
+filebrowser.extension.[name]
+
+Zibo Events:
+-------------------
+filebrowser.action.pre
+
+PHPUnit Tests:
+--------------
+You can use the zibo_test project in the zibo svn on http://zibo.googlcode.com

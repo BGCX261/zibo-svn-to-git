@@ -1,0 +1,16 @@
+#repository table tr td img {
+	float: left;
+	margin: 0px 7px 20px 0px;
+}
+
+#repository table tr td span.installed {
+    color: green;
+}
+
+#repository table tr td span.installedNewer {
+    color: orange;
+}
+
+#repository table tr td span.newerZiboRequired {
+    color: red;
+}

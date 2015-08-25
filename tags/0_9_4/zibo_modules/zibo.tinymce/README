@@ -1,0 +1,8 @@
+Zibo Configuration:
+-------------------
+tinymce.[tinymce_var]
+
+Zibo Events
+-----------
+tinymce.list.image.pre
+tinymce.list.link.pre

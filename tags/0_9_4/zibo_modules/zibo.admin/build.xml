@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+<project name="zibo.admin" basedir="." default="packageAdmin">
+    <property file="build.properties" />
+	<property name="build.path" value="build" override="false" />
+
+	<target name="packageAdmin">
+		<modulenameproperty name="build.name" source="module.xml" />
+		<moduleversionproperty name="build.version" source="module.xml" />
+		
+		<property name="build.file" value="${build.path}/${build.name}-${build.version}.phar" />
+
+		<delete file="${build.file}" />
+
+		<pharpackage destfile="${build.file}" basedir=".">
+            <fileset dir=".">
+                <include name="config/**" />
+                <include name="l10n/**" />
+                <include name="src/**" />
+                <include name="view/**" />
+                <include name="web/**" />
+                <include name="module.xml" />
+                <include name="README" />
+                <exclude name="**.svn**" />
+            </fileset>
+			<metadata>
+			    <element name="name" value="${build.name}" />
+			    <element name="version" value="${build.version}" />
+			</metadata>
+		</pharpackage>
+	</target>
+	
+    <target name="buildBaseSystem">
+        <property name="zibo.path" value="../" />
+        <property name="install.path" value="${build.path}/zibo.base" />
+        
+        <delete dir="${install.path}" />
+        <mkdir dir="${install.path}" />
+        
+        <copy todir="${install.path}" >
+            <fileset dir="${zibo.path}/zibo">
+                <include name="application/**" />
+                <include name="modules/**" />
+                <include name="system/**" />
+                <include name="bootstrap.php" />
+                <include name="index.php" />
+                <include name=".htaccess" />
+                <exclude name="**.svn**" />
+                <exclude name="**test**" />
+            </fileset>
+        </copy>
+        
+        <copy todir="${install.path}/modules" >
+            <fileset dir="${zibo.path}">
+                <include name="zibo.admin/**" />
+                <include name="zibo.archive/**" />
+                <include name="zibo.encryption/**" />
+                <include name="zibo.html/**" />
+                <include name="zibo.i18n/**" />
+                <include name="zibo.image/**" />
+                <include name="zibo.install/**" />
+                <include name="zibo.jquery/**" />
+                <include name="zibo.optimizer/**" />
+                <include name="zibo.repository/**" />
+                <include name="zibo.repository.client/**" />
+                <include name="zibo.security/**" />
+                <include name="zibo.smarty/**" />
+                <include name="zibo.validation/**" />
+                <include name="zibo.wizard/**" />
+                <include name="zibo.xmlrpc/**" />
+
+            	<exclude name="**.svn**" />
+                <exclude name="**test**" />
+                <exclude name="zibo.admin.dev/**" />
+                <exclude name="zibo.i18n.router/**" />
+                <exclude name="zibo.jquery.contextmenu/**" />
+                <exclude name="zibo.jquery.hotkeys/**" />
+                <exclude name="zibo.jquery.jplayer/**" />
+                <exclude name="zibo.repository.server/**" />
+                <exclude name="zibo.xmlrpc.client/**" />
+                <exclude name="zibo.xmlrpc.server/**" />
+            </fileset>
+        </copy>
+    </target>	
+	
+</project>

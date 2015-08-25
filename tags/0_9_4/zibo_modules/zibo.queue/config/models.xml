@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<models>
+    <model name="Queue" modelClass="zibo\queue\model\QueueModel" dataClass="zibo\queue\model\data\QueueData">
+        <field name="queue" type="string" />
+        <field name="data" type="binary">
+            <validation name="required" />
+        </field>
+        <field name="isInProgress" type="boolean" />
+        <field name="isError" type="boolean" />
+        <field name="error" type="text" />
+        <field name="dateScheduled" type="datetime" />
+        <field name="dateAdded" type="datetime" />
+        <field name="dateModified" type="datetime" />
+        
+	    <index name="queueIndex">
+	        <indexField name="queue" />
+	        <indexField name="dateScheduled" />
+	        <indexField name="isInProgress" />
+	        <indexField name="isError" />
+	    </index>
+	        
+	    <index name="statusIndex">
+	        <indexField name="queue" />
+	        <indexField name="dateScheduled" />
+	        <indexField name="isError" />
+	    </index>
+    </model>
+    
+</models>

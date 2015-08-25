@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<container>
+    <dependency interface="zibo\library\validation\ValidationFactory" class="zibo\library\validation\ValidationFactory">
+        <call method="__construct">
+            <argument type="dependency" value="zibo\core\Zibo" />
+        </call>
+    </dependency>
+</container>

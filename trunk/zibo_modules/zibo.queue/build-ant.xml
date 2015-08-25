@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zibo.queue" default="packageQueue">
+
+    <property name="phing.command" value="phing" />
+
+	<target name="packageQueue">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageQueue" />
+        </exec>
+    </target>
+
+</project>

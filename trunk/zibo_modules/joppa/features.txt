@@ -1,0 +1,13 @@
+- create/edit/delete sites, pages and folders
+- copy a part of a site, or a complete site 
+- reorder your site tree with drag and drop
+- theming with the possibility for a custom template for a page and widget
+- visibility settings on nodes based on time and security
+- 2 localization methods per site: a translated copy or a unique tree per locale
+- divide your pages in regions
+- drag and drop to manage the widgets in the regions
+- inheritable settings for all items on a node, configuration editor available
+- description and keywords meta
+- Caching where possible to improve response time and reduce server load
+- Old page routes are remembered and automatically redirected to the current route when requested
+- multi site based on the root url which can be set on site level, needs further webserver and dns configuration to work

@@ -1,0 +1,8 @@
+jQuery Hotkeys
+--------------
+
+jQuery.Hotkeys plugin lets you easily add and remove handlers for keyboard events anywhere
+in your code supporting almost any key combination. It takes one line of code to bind/unbind 
+a hot key combination.
+
+More info can be found at http://code.google.com/p/js-hotkeys/

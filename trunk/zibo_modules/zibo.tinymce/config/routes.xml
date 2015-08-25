@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+    <route path="tinymce/images" controller="zibo\tinymce\controller\TinyMCEController" action="imagesAction" />
+    <route path="tinymce/links" controller="zibo\tinymce\controller\TinyMCEController" action="linksAction" />
+</routes>

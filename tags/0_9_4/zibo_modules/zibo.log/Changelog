@@ -1,0 +1,2 @@
+- Module: moved the logging of the request flow to log.debug module
+- FileListener: only truncate the file when something has been written

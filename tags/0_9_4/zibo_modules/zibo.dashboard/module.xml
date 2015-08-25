@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modules>
+    <module namespace="zibo" name="dashboard" version="0.0.1" ziboVersion="0.7.0">
+        <dependency namespace="zibo" name="admin" version="0.13.0" />
+        <dependency namespace="zibo" name="i18n" version="0.3.0" />
+        <dependency namespace="zibo" name="jquery" version="1.3.2" />
+        <dependency namespace="zibo" name="smarty" version="2.6.26" />
+        <dependency namespace="zibo" name="widget" version="0.2.0" />
+    </module>
+</modules>

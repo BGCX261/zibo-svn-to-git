@@ -1,0 +1,96 @@
+#formSpider {
+	margin-bottom: 20px;
+}
+
+#formSpiderUrl {
+	width: 300px;
+}
+
+#formSpiderDelay {
+	width: 50px;
+}
+
+#formSpiderIgnore {
+	height: 50px;
+}
+
+#formSpiderCancel {
+	margin-right: 10px;
+}	
+
+#formSpider div.advanced,
+#spider span.loading,
+#spider div.status {
+	display: none;
+}
+
+#spider span.loading {
+	padding: 0 16px 0 0;
+}
+
+#spiderDetail, table,
+#spider table {
+	width: 100%;
+}
+
+#spiderDetail table td,
+#spider table td,
+#spider table th {
+	padding: 5px;
+}
+
+#spider table th {
+	text-align: left;
+}
+
+#spiderDetail table tr.even,
+#spider table tr.even {
+	background-color: #F7F7F7;
+}
+
+#spider table td.index {
+	width: 35px;
+}
+	
+#spiderDetail div.links p,
+#spiderDetail div.links li,
+#spiderDetail div.references p,
+#spiderDetail div.references li,
+#spider table td.error {
+	font-size: smaller;
+}
+
+#spiderDetail .failure,
+#spider .failure,
+#spider .error {
+	color: #cf2e2e;
+}
+
+#spiderDetail .success,
+#spider .success {
+    color: #569D23;
+}
+
+#spiderDetail .redirect,
+#spider .redirect {
+    color: #D56611;
+}
+
+#spiderDetail p.response {
+	margin-bottom: 5px;
+}
+
+#spiderDetail table.headers {
+    margin-bottom: 20px
+}
+
+#spiderDetail h4 {
+	font-weight: bold;
+	margin-bottom: 7px;
+}
+
+#spiderDetail div.links,
+#spiderDetail div.references {
+	width: 46%;
+	float: left;
+}

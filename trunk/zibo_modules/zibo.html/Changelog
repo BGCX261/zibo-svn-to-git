@@ -1,0 +1,18 @@
+0.4.2
+-----
+
+* fixed filename processing in FileField
+* fixed getMaxUploadSize in FileField
+
+- Form: remove optional name parameter in the addField method
+- moved Filter to the validation module
+- Introducing FormValidator to validate dependent fields of a form
+- Field added addValidator and validate 
+- DateField: fixed the HtmlView import
+- ListField: implemented showSelectedOptionsFirst
+- updated some API documentation
+- introducing WebsiteField
+- FileField: added willOverwrite flag
+- FileField: replace spaces with a underscore for uploaded files
+- SimpleTable: addGroupRow returns directly when there are no group decorators
+- introducing LocaleField object

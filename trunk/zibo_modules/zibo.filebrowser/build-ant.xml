@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zibo.filebrowser" default="packageFilebrowser">
+
+    <property name="phing.command" value="phing" />
+
+	<target name="packageFilebrowser">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageFilebrowser" />
+        </exec>
+    </target>
+
+</project>

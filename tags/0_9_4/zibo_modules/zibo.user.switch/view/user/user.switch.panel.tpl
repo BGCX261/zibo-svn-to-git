@@ -1,0 +1,1 @@
+<a href="{$_baseUrl}/authentication/switch">{image src="web/images/user.switch.png" id="userSwitchIcon" alt="user.label.switch"|translate title="user.label.switch"|translate}</a>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+    <route path="admin/permissions" controller="zibo\orm\security\controller\PermissionController" />
+    <route path="admin/roles" controller="zibo\orm\security\controller\RoleController" />
+    <route path="admin/users" controller="zibo\orm\security\controller\UserController" />
+</routes>

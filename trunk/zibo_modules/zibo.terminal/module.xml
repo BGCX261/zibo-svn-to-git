@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modules xmlns="http://www.zibo.be/ns/zibo/admin/modules"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.zibo.be/ns/zibo/admin/modules http://www.zibo.be/ns/zibo/admin/modules ">
+    <module namespace="zibo" name="terminal" version="0.3.0" ziboVersion="0.9.4">
+        <dependency namespace="zibo" name="admin" version="0.8.0" />
+        <dependency namespace="zibo" name="html" version="0.5.0" />
+        <dependency namespace="zibo" name="i18n" version="0.4.0" />
+        <dependency namespace="zibo" name="jquery" version="1.3.2" />
+        <dependency namespace="zibo" name="smarty" version="2.6.26" />
+        <dependency namespace="zibo" name="validation" version="0.5.0" />
+    </module>
+</modules>

@@ -1,0 +1,8 @@
+Zibo Configuration:
+-------------------
+mail.debug
+mail.sender
+
+PHPUnit Tests:
+--------------
+You can use the zibo_test project in the zibo svn on http://zibo.googlcode.com 

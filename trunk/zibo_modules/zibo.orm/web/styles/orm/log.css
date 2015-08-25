@@ -1,0 +1,40 @@
+#formLogFilter div.option label {
+    display: inline;
+}
+
+#modelLogDetail table.details {
+	margin-bottom: 25px;
+}
+
+#modelLogDetail table.details td.field {
+	font-weight: bold;
+	width: 125px;
+	padding: 7px;
+}
+
+#modelLogToggle {
+    display: block;
+    margin-bottom: 12px;
+}
+
+#modelLog {
+    display: none;
+}
+
+#modelLog li p {
+    display: none;
+    font-style: italic;
+    margin-top: 12px;
+}
+
+#modelLog li table {
+    display: none;
+}
+
+#modelLog li table tr td.fieldName {
+	width: 20%;
+}
+
+#modelLog li table tr td.oldValue {
+	width: 40%;
+}

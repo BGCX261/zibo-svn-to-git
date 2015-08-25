@@ -1,0 +1,4 @@
+- added api to create a modulair webservice
+- ResponseView: implemented return boolean in render method
+- ServerView: need full path for the style, added web directory in front of the style path
+- ServerModule: using new taskbar api

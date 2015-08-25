@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zibo.google" default="packageGoogle">
+
+    <property name="phing.command" value="phing" />
+
+	<target name="packageGoogle">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageGoogle" />
+        </exec>
+    </target>
+
+</project>

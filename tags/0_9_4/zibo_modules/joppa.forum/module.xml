@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modules xmlns="http://www.zibo.be/ns/zibo/admin/modules"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.zibo.be/ns/zibo/admin/modules http://www.zibo.be/ns/zibo/admin/modules ">
+    <module namespace="joppa" name="forum" version="0.1.0" ziboVersion="0.8.0">
+        <dependency namespace="joppa" name="cms" version="3.0.0-alpha" />
+        <dependency namespace="zibo" name="emoticons" version="0.2.0" />
+        <dependency namespace="zibo" name="html" version="0.1.0" />
+        <dependency namespace="zibo" name="i18n" version="0.4.0" />
+        <dependency namespace="zibo" name="manager" version="0.2.0" />
+        <dependency namespace="zibo" name="orm" version="0.8.0" />
+        <dependency namespace="zibo" name="orm.security" version="0.3.0" />
+    </module>
+</modules>

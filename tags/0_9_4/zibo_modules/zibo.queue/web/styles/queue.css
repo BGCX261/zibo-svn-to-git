@@ -1,0 +1,57 @@
+div.job-waiting,
+div.job-progress,
+div.job-error {
+	width: 10px;
+	height: 10px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+div.job-waiting {
+	background-color: #e8e630;
+}
+
+div.job-progress {
+	background-color: #347a1b;
+}
+
+div.job-error {
+	background-color: #7a1b1b;
+}
+
+table.list tr td.status {
+	width: 120px;
+}
+
+table.list tr td.status div.job-waiting,
+table.list tr td.status div.job-progress,
+table.list tr td.status div.job-error {
+	float: left;
+	margin: 3px 7px 0 0;
+}
+
+table.queueDetail {
+	margin-bottom: 12px;
+}
+
+table.queueDetail td.key {
+	padding: 3px 0;
+}
+
+table.queueDetail td.key {
+	width: 120px;
+}
+
+table.queueDetail td.key {
+	font-weight: bold;
+}
+
+#jobStatus {
+	float: left;
+	margin-top: 2px;
+	margin-right: 5px;
+}
+
+#jobInfo {
+	float: left;
+}

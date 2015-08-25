@@ -1,0 +1,26 @@
+Version 0.4.0
+-------------
+* Updated API documentation
+* Fixed the tests to the updated Zibo API
+* Request: cleaned up the fromXMLString method
+* Value: getting the XML of a struct value will return a <nil /> element instead of an empty and thus invalid <struct /> element
+
+Version 0.3.1
+-------------
+* xmlrpc_request.rng: params contains zeroOrMore param tags and not oneOrMore 
+* Server: made error messages a bit clearer
+* Value: improved converting to integer in convertValue 
+
+Version 0.3.0
+-------------
+* Server: opened more for inheritance and extended parameter handling
+* Value: added convertValue to cast values to a different type if possible 
+* Value: better nil and array handling
+* Response: using zibo dom document
+* ExtendedServer: added system.multicall service
+* throw XmlRpcInvalidResponseException when the response xml does not conform the rng schema
+* make sure there is an error message when a service throws an exception
+
+Version 0.2.2
+-------------
+* added XmlRpcInvalidResponseException

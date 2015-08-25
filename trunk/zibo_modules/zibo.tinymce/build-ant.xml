@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zibo.tinymce" default="packageTinyMCE">
+
+    <property name="phing.command" value="phing" />
+
+	<target name="packageTinyMCE">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageTinyMCE" />
+        </exec>
+    </target>
+
+</project>

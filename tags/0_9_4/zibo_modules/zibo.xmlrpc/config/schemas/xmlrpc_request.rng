@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+	datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+	<!-- RelaxNG schema for XML-RPC (http://www.xmlrpc.com/spec) request -->
+
+	<include href="xmlrpc_common.rng" />
+	<start>
+		<ref name="methodcall" />
+	</start>
+	<define name="methodcall">
+		<element name="methodCall">
+			<ref name="methodname" />
+			<optional>
+				<ref name="params" />
+			</optional>
+		</element>
+	</define>
+	<define name="methodname">
+		<element name="methodName">
+			<text />
+		</element>
+	</define>
+	<define name="params">
+		<element name="params">
+			<zeroOrMore>
+				<ref name="param" />
+			</zeroOrMore>
+		</element>
+	</define>
+	<!--
+TODO: restrict the methodName to authorized
+characters
+-->
+</grammar>

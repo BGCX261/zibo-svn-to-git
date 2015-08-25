@@ -1,0 +1,30 @@
+#formContentPropertiesFields {
+	height: 90px;
+}
+
+#formContentPropertiesOrderDirection {
+	width: 120px;
+}
+
+#formContentPropertiesConditionExpression {
+	height: 75px;
+}
+
+#formContentPropertiesOrderExpression,
+#formContentPropertiesEmptyResultMessage {
+	height: 50px;
+}
+
+#formContentProperties div.parameterIdId label,
+#formContentProperties div.parameterIdSlug label,
+#formContentProperties div.parametersTypeNone label,
+#formContentProperties div.parametersTypeNamed label,
+#formContentProperties div.parametersTypeNumeric label {
+    display: inline;
+    padding-left: 3px;
+}
+
+#formContentProperties div.predefinedViewProperties,
+#formContentProperties div.customViewProperties {
+	padding-left: 35px;
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+    <start>
+        <element name="routes">
+            <zeroOrMore>
+                <ref name="route"/>
+            </zeroOrMore>
+        </element>
+    </start>
+
+    <define name="route">
+        <element name="route">
+            <ref name="attlist.route"/>
+            <empty/>
+        </element>
+    </define>
+
+    <define name="attlist.route">
+        <group>
+            <attribute name="path"/>
+            <attribute name="controller"/>
+            <optional>
+                <attribute name="action"/>
+            </optional>
+        </group>
+    </define>
+
+</grammar>

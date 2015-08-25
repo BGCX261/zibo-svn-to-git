@@ -1,0 +1,13 @@
+body #toolbar {
+    line-height: 1.3em;
+    padding-top: 3px;
+}
+
+body #toolbar div.helper {
+    padding-right: 40px;
+    _padding-right: 12px;
+}
+
+#taskbar div.main {
+    width: 650px;
+}

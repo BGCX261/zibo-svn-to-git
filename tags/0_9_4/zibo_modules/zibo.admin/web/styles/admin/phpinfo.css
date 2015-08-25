@@ -1,0 +1,84 @@
+#phpInfo pre {
+    margin: 0px; 
+    font-family: monospace;
+}
+
+#phpInfo a:link {
+    color: #000099; 
+    text-decoration: none;
+}
+
+#phpInfo a:hover {
+    text-decoration: underline;
+}
+
+#phpInfo table {
+    border-collapse: collapse;
+}
+
+#phpInfo .center {
+    text-align: center;
+}
+
+#phpInfo .center table {
+	width: 100%; 
+    text-align: left;
+}
+
+#phpInfo .center th { 
+    text-align: center !important; 
+}
+
+#phpInfo td, th { 
+	border: 1px solid #333; 
+	padding: 2px;
+	vertical-align: baseline;
+}
+
+#phpInfo h1 {
+    font-size: 150%;
+}
+
+#phpInfo h2 {
+    font-size: 125%;
+}
+
+#phpInfo .p {
+    text-align: left;
+}
+
+#phpInfo .e {
+    background-color: #ccccff; 
+    font-weight: bold; 
+    color: #111;
+}
+
+#phpInfo .h {
+    background-color: #9999cc; 
+    font-weight: bold; 
+    color: #111;
+}
+
+#phpInfo .v {
+    background-color: #cccccc; 
+	color: #111;
+}
+
+#phpInfo .vr {
+	background-color: #cccccc; 
+	text-align: right; 
+	color: #111;
+}
+
+#phpInfo img {
+	float: right;
+    border: 0px;
+}
+
+#phpInfo hr {
+    width: 600px; 
+    background-color: #cccccc; 
+    border: 0px; 
+    height: 1px; 
+    color: #111;
+}

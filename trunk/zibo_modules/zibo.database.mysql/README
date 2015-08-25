@@ -1,0 +1,10 @@
+
+PHPUnit Tests:
+--------------
+You can use the zibo_test project in the zibo svn on http://zibo.googlcode.com
+
+To ensure your MySQL tests will pass, follow these steps:
+
+- create file application/config/database.ini in your test installation
+- add a line with connection.mysql = [dsn]
+- create the table "existant" in your database

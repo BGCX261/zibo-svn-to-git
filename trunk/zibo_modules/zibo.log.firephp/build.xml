@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+
+<project name="zibo.log.firephp" basedir="." default="packageLogFirePHP">
+	<property file="build.properties" />
+	<property name="build.path" value="build" override="false" />
+
+	<target name="packageLogFirePHP">
+		<modulenameproperty name="build.name" source="module.xml" />
+		<moduleversionproperty name="build.version" source="module.xml" />
+		<property name="build.file" value="${build.path}/${build.name}-${build.version}.phar" />
+
+		<delete file="${build.file}" />
+
+		<phar destfile="${build.file}" basedir="." compression="gzip">
+            <fileset dir=".">
+                <include name="config/**" />
+                <include name="src/**" />
+                <include name="vendor/**" />
+                <include name="module.xml" />
+                <include name="README" />
+                <exclude name="**.svn**" />
+            </fileset>
+		</phar>
+	</target>
+</project>

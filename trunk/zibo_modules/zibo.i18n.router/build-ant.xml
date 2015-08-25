@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zibo.i18n.router" default="packageI18nRouter">
+
+    <property name="phing.command" value="phing" />
+
+	<target name="packageI18nRouter">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageI18nRouter" />
+        </exec>
+    </target>
+
+</project>

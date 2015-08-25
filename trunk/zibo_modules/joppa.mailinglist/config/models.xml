@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<models>
+    <model name="MailinglistSubscriber" modelClass="joppa\mailinglist\model\SubscriberModel" dataClass="joppa\mailinglist\model\data\SubscriberData">
+        <field name="email" type="string" unique="true">
+            <validation name="email" />
+        </field>
+        <field name="dateAdded" type="datetime" />
+    </model>	
+    <model name="MailinglistMessage" modelClass="joppa\mailinglist\model\MessageModel" dataClass="joppa\mailinglist\model\data\MessageData">
+        <field name="subject" type="string">
+            <validation name="required" />
+        </field>
+        <field name="message" type="text">
+            <validation name="required" />
+        </field>
+        <field name="recipients" model="MailinglistSubscriber">
+            <validation name="required" />
+        </field>
+        <field name="dateAdded" type="datetime" />
+    </model>	
+</models>

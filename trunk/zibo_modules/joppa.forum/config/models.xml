@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<models>
+
+    <model name="ForumProfile" modelClass="joppa\forum\model\ForumProfileModel" dataClass="joppa\forum\model\data\ForumProfileData" log="true">
+        <field name="user" model="User" relation="belongsTo" />
+        <field name="name" type="string" />
+        <field name="avatar" type="image" />
+        <field name="location" type="string" />
+        <field name="website" type="website" />
+        <field name="gender" type="string" />
+        <field name="birthday" type="date" />
+        <field name="msn" type="email" />
+        <field name="myspace" type="website" />
+        <field name="facebook" type="website" />
+        <field name="signature" type="text" />
+        <field name="numPosts" type="integer" default="0" />
+    </model>
+
+	<model name="ForumRanking" modelClass="joppa\forum\model\ForumRankingModel" dataClass="joppa\forum\model\data\ForumRankingData" log="true">
+		<field name="name" type="string" label="joppa.forum.label.manager.ranking">
+			<validation name="required" />
+		</field>
+		<field name="numPosts" type="integer" default="0" label="joppa.forum.label.manager.ranking.posts">
+			<validation name="minmax">
+				<parameter name="minimum" value="0" />
+			</validation>
+		</field>
+		<field name="stars" type="integer" default="0" label="joppa.forum.label.manager.ranking.stars">
+			<validation name="minmax">
+				<parameter name="minimum" value="0" />
+				<parameter name="maximum" value="15"/>
+			</validation>
+		</field>
+		
+		<format name="title">{name}</format>
+	</model>
+	
+	<model name="ForumCategory" modelClass="joppa\forum\model\ForumCategoryModel" dataClass="joppa\forum\model\data\ForumCategoryData" log="true">
+		<field name="name" type="string">
+			<validation name="required" />
+		</field>
+		<field name="boards" model="ForumBoard" relation="hasMany" relationOrder="{orderIndex} ASC" dependant="true" />
+		<field name="orderIndex" type="integer" />
+		
+		<format name="title">{name}</format>
+	</model>
+	
+	<model name="ForumBoard" modelClass="joppa\forum\model\ForumBoardModel" dataClass="joppa\forum\model\data\ForumBoardData" log="true">
+		<field name="category" model="ForumCategory" relation="belongsTo">
+			<validation name="required" />
+		</field>
+		<field name="name" type="string">
+			<validation name="required" />
+		</field>
+		<field name="description" type="text" />
+		<field name="allowView" type="integer" default="1" />
+		<field name="allowNewTopics" type="integer" default="1" />
+		<field name="allowNewPosts" type="integer" default="1" />
+		<field name="moderators" model="ForumProfile" relation="hasMany" linkModel="ForumBoardModerator" />
+		<field name="topics" model="ForumTopic" relation="hasMany" dependant="true" />
+		<field name="lastTopic" model="ForumTopic" relation="belongsTo" />
+		<field name="numTopics" type="integer" default="0" />
+		<field name="numPosts" type="integer" default="0" />
+		<field name="orderIndex" type="integer" />
+		
+		<format name="title">{name}</format>
+		<format name="teaser">{description}</format>
+	</model>
+
+	<model name="ForumTopic" modelClass="joppa\forum\model\ForumTopicModel" dataClass="joppa\forum\model\data\ForumTopicData" log="true">
+		<field name="board" model="ForumBoard" relation="belongsTo">
+			<validation name="required" />
+		</field>
+        <field name="posts" model="ForumPost" relation="hasMany" dependant="true" />
+		<field name="views" model="ForumProfile" relation="hasMany" linkModel="ForumTopicView" />
+		<field name="numViews" type="integer" default="0" />
+		<field name="numPosts" type="integer" default="1" />
+		<field name="firstPost" model="ForumPost" relation="belongsTo" />
+		<field name="lastPost" model="ForumPost" relation="belongsTo" />
+		<field name="isSticky" type="boolean" default="0" />
+		<field name="isLocked" type="boolean" default="0" />
+		<field name="dateAdded" type="datetime" />
+		<field name="dateModified" type="datetime" />
+	</model>
+	
+	<model name="ForumPost" modelClass="joppa\forum\model\ForumPostModel" dataClass="joppa\forum\model\data\ForumPostData" log="true">
+		<field name="author" model="ForumProfile" relation="belongsTo" />
+		<field name="topic" model="ForumTopic" relation="belongsTo">
+			<validation name="required" />
+		</field>
+		<field name="topicPostNumber" type="integer" />
+		<field name="subject" type="string">
+			<validation name="required" />
+		</field>
+		<field name="message" type="text">
+			<validation name="required" />
+		</field>
+		<field name="authorModified" model="ForumProfile" relation="belongsTo" />
+		<field name="dateAdded" type="datetime" />
+		<field name="dateModified" type="datetime" />
+		
+		<format name="title">{subject}</format>
+		<format name="teaser">{message|truncate}</format>
+	</model>
+	
+    <model name="ForumPrivateMessage" modelClass="joppa\forum\model\ForumPrivateMessageModel" dataClass="joppa\forum\model\data\ForumPrivateMessageData">
+        <field name="sender" model="ForumProfile" relation="belongsTo">
+            <validation name="required" />
+        </field>
+        <field name="recipient" model="ForumProfile" relation="belongsTo">
+            <validation name="required" />
+        </field>
+        <field name="isNew" type="boolean" default="1" />
+        <field name="isDeleted" type="boolean" default="0" />
+        <field name="subject" type="string">
+            <validation name="required" />
+        </field>
+        <field name="message" type="text">
+            <validation name="required" />
+        </field>
+        <field name="dateAdded" type="datetime" />
+        
+        <index name="newMessages">
+            <indexField name="recipient" />
+            <indexField name="isNew" />
+        </index>
+        
+        <format name="title">{subject}</format>
+    </model>
+	
+</models>

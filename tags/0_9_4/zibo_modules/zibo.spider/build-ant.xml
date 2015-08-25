@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zibo.spider" default="packageSpider">
+
+    <property name="phing.command" value="phing" />
+
+	<target name="packageSpider">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageSpider" />
+        </exec>
+    </target>
+
+</project>

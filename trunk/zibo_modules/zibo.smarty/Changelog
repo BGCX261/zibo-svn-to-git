@@ -1,0 +1,10 @@
+- Module: import SmartyView for clearCache
+- added {subview} smarty function
+- SmartyView: modified the hooks: added preSubviewRender which is the first hook, used to be preRender. preRender is now after the rendering of the subviews.
+- SmartyView: implemented the return boolean in the render method
+- SmartyView: renamed setView and getViews to setSubview and getSubviews
+- SmartyView: changed default compile directory to application/data/cache/smarty/compile
+- Module: implemented clear cache event
+- ResourceHandler: added cache to resource handler
+- ResourceHandler: using filesystem\Browser to find the template paths
+- HtmlSmartyView: don't parse local anchors (eg #detail) in HtmlSmartyView

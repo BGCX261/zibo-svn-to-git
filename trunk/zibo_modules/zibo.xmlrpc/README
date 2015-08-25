@@ -1,0 +1,8 @@
+Zibo Configuration:
+-------------------
+schema.xmlrpc.request
+schema.xmlrpc.response
+
+PHPUnit Tests:
+--------------
+You can use the zibo_test project in the zibo svn on http://zibo.googlcode.com 

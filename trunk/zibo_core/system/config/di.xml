@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<container>
+    <dependency interface="zibo\core\module\ModuleLoader" class="zibo\core\module\ConfigModuleLoader" id="core" />
+    <dependency interface="zibo\library\http\session\Session" class="zibo\library\http\session\PhpSession" id="core" />
+    <dependency interface="zibo\core\router\Router" class="zibo\core\router\GenericRouter" id="core">
+        <call method="__construct">
+            <argument type="dependency" value="zibo\core\environment\Environment" />
+            <argument type="dependency" value="zibo\core\router\io\RouterIO" />
+        </call>
+    </dependency>
+    <dependency interface="zibo\core\router\io\RouterIO" class="zibo\core\router\io\XmlRouterIO" id="core">
+        <call method="__construct">
+            <argument type="dependency" value="zibo\core\Zibo" />
+        </call>
+    </dependency>
+    <dependency interface="zibo\core\dispatcher\Dispatcher" class="zibo\core\dispatcher\GenericDispatcher" id="core">
+        <call method="__construct">
+            <argument type="dependency" value="zibo\core\Zibo" />
+            <argument type="dependency" value="zibo\library\ObjectFactory" />
+        </call>
+    </dependency>
+</container>

@@ -1,0 +1,53 @@
+#wizardModel div.advanced {
+	display: none;
+}
+
+#wizardModel div.fieldTypeProperty label,
+#wizardModel div.fieldTypeRelation label {
+	display: inline;
+	padding-left: 3px;
+}
+
+#wizardModel div.property,
+#wizardModel div.relation {
+	display: none;
+	margin-left: 25px;
+}
+
+#wizardModel div.relation div.relationLinkModel,
+#wizardModel div.relation div.relationForeignKey,
+#wizardModel div.relation div.relationOrder {
+    display: none;
+}
+
+#tableModelField td {
+	padding: 3px 7px 3px 7px;
+}
+
+#tableModelField td div.info,
+#tableDataFormat td div.info {
+	margin-bottom: 0;
+}
+
+#wizardModel div.basicInfo {
+    margin-bottom: 24px;
+}
+
+#wizardModel p.indexes {
+	margin-bottom: 24px;
+}
+
+ul.wizardSteps {
+	list-style: none;
+	list-style-image: url(../../images/orm/wizard.step.disabled.png);
+}
+
+ul.wizardSteps li {
+	margin: 0 0 7px 25px;
+	color: #777;
+}
+
+ul.wizardSteps li.selected {
+	color: #111;
+	list-style-image: url(../../images/orm/wizard.step.enabled.png);
+}

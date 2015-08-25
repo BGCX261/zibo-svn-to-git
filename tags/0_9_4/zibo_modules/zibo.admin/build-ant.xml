@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zibo.admin" default="packageAdmin">
+
+    <property name="phing.command" value="phing" />
+
+	<target name="packageAdmin">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageAdmin" />
+        </exec>
+    </target>
+
+	<target name="buildBaseSystem">
+        <exec dir="" executable="${phing.command}">
+            <arg line="buildBaseSystem" />
+        </exec>
+    </target>
+
+</project>

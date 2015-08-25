@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="joppa.advertising" default="packageJoppaAdvertising">
+
+    <property name="phing.command" value="phing" />
+
+	<target name="packageJoppaAdvertising">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageJoppaAdvertising" />
+        </exec>
+    </target>
+
+</project>

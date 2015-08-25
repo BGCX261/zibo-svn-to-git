@@ -1,0 +1,2 @@
+- catch exceptions when sending the log message to the browser
+- implemented fallback type when the log type is not found

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zibo.database.mysql" default="packageDatabaseMySQL">
+
+    <property name="phing.command" value="phing" />
+
+	<target name="packageDatabaseMySQL">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageDatabaseMySQL" />
+        </exec>
+    </target>
+
+</project>

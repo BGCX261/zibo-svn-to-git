@@ -1,0 +1,17 @@
+form div.bbcodeToolbar {
+	border: 1px solid #CCC;
+	background-color: #EEE;
+    margin-bottom: 0;
+    padding: 3px;
+}
+
+form div.bbcodeToolbar a img {	
+	border: 1px solid #EEE;
+	background-color: #EEE;
+    padding: 2px;
+}
+
+form div.bbcodeToolbar a:hover img {	
+	border: 1px solid #BBB;
+	background-color: #DDD;
+}

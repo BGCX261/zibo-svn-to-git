@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+
+<project name="zibo.archive" basedir="." default="packageArchive">
+    <property file="build.properties" />
+	<property name="build.path" value="build" override="false" />
+
+	<target name="packageArchive">
+		<modulenameproperty name="build.name" source="module.xml" />
+		<moduleversionproperty name="build.version" source="module.xml" />
+		<property name="build.file" value="${build.path}/${build.name}-${build.version}.phar" />
+
+		<delete file="${build.file}" />
+
+		<pharpackage destfile="${build.file}" basedir="." compression="gzip">
+            <fileset dir=".">
+                <include name="config/**" />
+                <include name="src/**" />
+                <include name="module.xml" />
+                <include name="README" />
+                <exclude name="**.svn**" />
+            </fileset>
+            <metadata>
+                <element name="name" value="${build.name}" />
+                <element name="version" value="${build.version}" />
+            </metadata>			
+		</pharpackage>
+	</target>
+</project>

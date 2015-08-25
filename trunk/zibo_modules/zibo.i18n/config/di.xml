@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<container>
+    <dependency interface="zibo\library\i18n\locale\negotiator\Negotiator" class="zibo\library\i18n\locale\negotiator\HttpNegotiator">
+        <call method="__construct">
+            <argument type="dependency" value="zibo\core\Zibo" />
+        </call>
+    </dependency>
+    <dependency interface="zibo\library\i18n\locale\io\LocaleIO" class="zibo\library\i18n\locale\io\ConfigLocaleIO">
+        <call method="__construct">
+            <argument type="dependency" value="zibo\core\Zibo" />
+        </call>
+    </dependency>
+    <dependency interface="zibo\library\i18n\locale\LocaleManager" class="zibo\library\i18n\locale\LocaleManager">
+        <call method="__construct">
+            <argument type="dependency" value="zibo\library\i18n\locale\io\LocaleIO" />
+            <argument type="dependency" value="zibo\library\i18n\locale\negotiator\Negotiator" />
+        </call>
+    </dependency>
+    <dependency interface="zibo\library\i18n\translation\io\TranslationIO" class="zibo\library\i18n\translation\io\IniTranslationIO">
+        <call method="__construct">
+            <argument type="dependency" value="zibo\core\Zibo" />
+        </call>
+    </dependency>
+    <dependency interface="zibo\library\i18n\translation\TranslationManager" class="zibo\library\i18n\translation\TranslationManager">
+        <call method="__construct">
+            <argument type="dependency" value="zibo\library\i18n\translation\io\TranslationIO" />
+        </call>
+    </dependency>
+    <dependency interface="zibo\library\i18n\I18n" class="zibo\library\i18n\I18n">
+        <call method="__construct">
+            <argument type="dependency" value="zibo\library\i18n\locale\LocaleManager" />
+            <argument type="dependency" value="zibo\library\i18n\translation\TranslationManager" />
+        </call>
+    </dependency>
+</container>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+    <route path="admin/cron" controller="zibo\cron\controller\CronController" action="overviewAction" />
+    <route path="cron" controller="zibo\cron\controller\CronController" />
+</routes>

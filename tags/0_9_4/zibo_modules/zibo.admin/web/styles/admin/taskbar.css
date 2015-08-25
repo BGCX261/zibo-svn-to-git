@@ -1,0 +1,209 @@
+#taskbar {
+    background: #111;
+    border-bottom: 1px solid #333; 
+    
+    font-family: Verdana, Arial, Helvetica, Sans-Serif;
+    font-size: 13px;
+    line-height: 1em;
+    
+    width: 100%;
+    height: 21px;
+    padding-top: 7px;
+    
+    position: fixed;
+}
+
+#bodyContainer {
+    padding-top: 21px;
+}
+
+#taskbar h1 {
+    color: #777;
+    float: left;
+    margin: 0 0 0 12px;
+    font-size: 100%;
+    width: auto;
+}
+
+#taskbar h1 a {
+    color: #777;
+}
+
+#taskbar h1 a:hover {
+    color: #AAA;
+    text-decoration: none;    
+}
+
+#taskbar a {
+    text-decoration: none;
+}
+
+#taskbar a:hover {
+    text-decoration: underline;
+}
+
+#taskbar ul li a.menu {
+    color: #F7F7F7;
+    padding-right: 9px;
+    background: url(../../images/arrow.down.png) no-repeat right center;
+}
+
+#taskbar ul li.menu ul li.menu {
+    background: url(../../images/arrow.right.png) no-repeat 95% center;
+}
+
+/*#taskbar ul li.menu ul li.menu a {
+    background: none;
+}*/
+
+#taskbar ul li a.menu:hover {
+    color: #FFF;
+}
+
+#taskbar ul.panels {
+    list-style: none;
+    margin-right: 0px;
+}
+
+#taskbar ul.panels li {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 12px;
+    color: #EEE;
+    float: right;
+}
+
+#taskbar ul.panels li form {
+    margin-top: -5px; 
+}
+
+#taskbar ul.settings {
+    width: auto;
+    float: right;
+}
+
+#taskbar ul.applications li a,
+#taskbar ul.panels li a {
+    color: #F7F7F7;
+}
+
+#taskbar ul.applications li a:hover,
+#taskbar ul.panels li a:hover {
+    color: #FFF;
+}
+
+#taskbar ul.applications li.active {
+    font-weight: bold;
+}
+
+#taskbar ul.applications li ul li a,
+#taskbar ul.applications li ul li a:hover,
+#taskbar ul.settings li ul li a,
+#taskbar ul.settings li ul li a:hover {
+    color: #333;
+}
+
+#taskbar ul li ul li {
+    margin: 0;
+    padding: 6px 12px;
+    text-align: left;
+}
+
+#taskbar ul li ul li a {
+    color: #333;
+}
+
+#taskbar div.main {
+    position: absolute;
+    width: 80%;
+    overflow: visible;
+}
+
+#taskbar div.helper {
+    float: right;
+    width: 700px;
+    padding-right: 12px;
+}
+    
+#taskbar div.cmDiv {
+    display: inline;
+    float: right;
+    width: auto;
+}
+
+#taskbar div.main div.cmDiv {
+    float: left;
+}
+
+#taskbar div.helper div.cmDiv {
+    width: 85px;   
+}
+
+.clickMenu {
+    margin: 0;
+    padding: 0;
+}
+
+.clickMenu, .clickMenu ul {
+    list-style: none;
+}
+
+.clickMenu ul {
+    border: 1px solid #CCC;
+    background-color: #F7F7F7;
+    min-width: 50px; /* ie doesnt know this :/ */
+    //float: left;/*ie again*/
+    //width: 100%;/*and again*/
+}
+
+.clickMenu div.outerbox {
+    display: none;
+    min-width: 146px; /* firefox produces animation-flickering when the box is bigger than this :/ */
+}
+.clickMenu div.inner {
+    //top: 20px; /* for ie */
+    left: -7px;
+    top: 19px;
+    margin: 0;
+}
+.clickMenu div.inner div.outerbox {
+    margin: 0;
+    left: 98px;
+    //left: 90px; /* for ie */
+    top: -3px;
+}
+.clickMenu li {
+    position: relative;
+}
+.clickMenu li.main {
+    float: left;
+    //height: 20px; /* for ie */
+}
+.clickMenu li.main li {
+    z-index: 2;
+    min-width: 50px;
+}
+
+.clickMenu li.hover {
+    z-index: 1 !important; /* the hover z-index has to be below the normal one the hovering items may be drawn over a submenu */
+}
+
+.clickMenu li.hover ul li.hover {
+    cursor: pointer;
+}
+
+#taskbar .clickMenu li.hover ul li.hover a:hover {
+    text-decoration: none;
+}
+
+#taskbar .clickMenu li.hover ul li.hover.menu,
+#taskbar .clickMenu li.hover ul li.hover {
+    background-color: #E3E3E3;
+}
+
+.clickMenu img.liArrow {
+    position: absolute;
+    right: 5px;
+    top: 0.61em;
+    background: url(../../images/arrow.right.png);
+}

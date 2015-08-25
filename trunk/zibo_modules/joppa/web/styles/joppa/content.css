@@ -1,0 +1,100 @@
+#content form {
+    margin-bottom: 21px;
+}
+
+#content ul {
+    list-style: none;
+}
+
+#content li.widget {
+    border: 1px solid #CCC;
+    padding: 7px 7px;
+}
+
+div#contentRegion {
+    float: left;
+	width: 45%;
+}
+
+#content ul.droppable {
+    border: 1px solid #CCC;
+    min-height: 200px;
+    width: 100%;
+    padding: 5px 4px 1px 5px;
+}
+
+#content ul.droppable li {
+	padding: 0;
+    margin: 0px 0px 4px 0px;
+}
+
+#content ul li.widget {
+	background: #FFF url(../../images/joppa/widget.background.png) repeat-y;
+}
+
+#content ul.droppable li div.widgetActions {
+	width: 25px;
+	float: left;
+}
+
+#content ul.droppable li div.widgetActions div.icon,
+#content ul.droppable li div.widgetActions div.handle {
+	text-align: center;
+	padding: 3px;
+}
+
+#content ul.droppable li div.widgetActions div.icon {
+	border-bottom: 1px solid #CCC;
+	background-color: #E1E1E1;
+	padding-bottom: 7px;
+}
+
+#content ul.droppable li div.widgetActions div.icon a {
+	padding-bottom: 4px;
+	background: url(../../images/joppa/arrow.down.grey.png) no-repeat scroll center bottom transparent;
+}
+
+#content ul.droppable li div.widgetInfo {
+	padding: 5px 0px 5px 9px;
+	width: 85%;
+	float: left;
+}
+
+#content ul.droppable li div.widgetInfo .name {
+	display: block;
+	margin-bottom: 7px;
+}
+
+#content ul.droppable li img.handle {
+	cursor: move;
+}
+
+#content ul.droppable li div.preview {
+	display: inline;
+	margin-top: 5px;
+	color: #666;
+	line-height: 120%;
+}
+
+#content div#widgets {
+	margin-left: 25px;
+    float: left;
+    width: 45%;
+}
+
+#content div#widgets a.namespace {
+	display: block;
+	margin-bottom: 7px;
+	font-weight: bold;
+}
+
+#content div#widgets ul li {
+    width: 150px;
+    margin-left: 0;
+    cursor: move;
+    padding: 7px 7px 7px 5px;
+}
+
+#content div#widgets ul li img {
+	margin-right: 7px;
+}

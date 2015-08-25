@@ -1,0 +1,39 @@
+#summary Best practices for reading from the Zibo file system structure.
+
+= Introduction =
+
+The power of Zibo is partly based on it's file system structure.
+
+= Details =
+
+== Read a single absolute file or a file relative to the root path ==
+
+Use the file object to read a file.
+
+<code language="php">
+use zibo\library\filesystem\File;
+...
+$file = new File('application/data/text.txt');
+$contents = $file->read();
+</code>
+
+== Read a single file relative to application, a module or system ==
+
+Use Zibo to look for a file relative to application, a module or system. Zibo will look first in the application directory, then in the installed modules and finally in the system directory. When your file is found, Zibo will stop looking and return the file. 
+
+<code language="php">
+$file = $zibo->getFile('data/text.txt');
+$contents = $file->read();
+</code>
+
+== Read multiple files relative to application, a module or system ==
+
+Use Zibo to look for all files relative to application, a module or system. Zibo will look first in the application directory, then in the installed modules and finally in the system directory.
+
+<code language="php">
+$files = $zibo->getFiles('data/text.txt');
+foreach ($files as $file) {
+    $contents = $file->read();
+    ...
+}
+</code>

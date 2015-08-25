@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modules xmlns="http://www.zibo.be/ns/zibo/admin/modules"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.zibo.be/ns/zibo/admin/modules http://www.zibo.be/ns/zibo/admin/modules ">
+    <module namespace="zibo" name="error.report" version="0.3.0" ziboVersion="0.8.0">
+        <dependency namespace="zibo" name="admin" version="0.13.0" />
+        <dependency namespace="zibo" name="html" version="0.4.0" />
+        <dependency namespace="zibo" name="mail" version="0.1.2" />
+        <dependency namespace="zibo" name="security" version="0.3.0" />
+    </module>
+</modules>

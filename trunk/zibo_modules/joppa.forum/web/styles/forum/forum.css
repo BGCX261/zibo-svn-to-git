@@ -1,0 +1,76 @@
+#forum table {
+	width: 100%;
+}
+
+#forum table tr.even {
+	background-color: #F3F3F3;
+}
+
+#forum table th {
+	padding: 3px 3px;
+}
+
+#forum table td {
+	padding: 5px 3px;
+}
+
+#forum table td.category {
+	padding: 7px 3px;
+	background-color: #DDD;
+	font-weight: bold; 
+}
+
+#forum table td.board span.description {
+	display: block;
+	margin-top: 3px;
+}
+
+#forum table td.board span.moderators {
+	display: block;
+	margin-top: 3px;
+	font-size: smaller;
+}
+
+#forum table th.numViews,
+#forum table td.numViews,
+#forum table th.numTopics,
+#forum table td.numTopics,
+#forum table th.numPosts,
+#forum table td.numPosts {
+	text-align: center;
+	width: 50px;
+}
+
+#forum table th.topic,
+#forum table th.author,
+#forum table th.lastPost {
+	text-align: left;
+}
+
+#forum table td.lastPost span {
+	display: block;
+	margin-bottom: 5px;
+}
+
+#forum table td.lastPost span.date {
+	font-size: smaller;
+}
+
+#forum div.pagination {
+	margin-bottom: 15px;
+}
+
+#forum div.posts {
+	margin-bottom: 15px;
+}
+
+#forum div.post div.info {
+	float: right;
+	width: 60%;
+	text-align: right;
+}
+
+#forum div.post div.author {
+	float: left;
+	width: 30%;
+}

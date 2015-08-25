@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zibo.i18n" default="packageI18n">
+
+    <property name="phing.command" value="phing" />
+
+	<target name="packageI18n">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageI18n" />
+        </exec>
+    </target>
+
+</project>

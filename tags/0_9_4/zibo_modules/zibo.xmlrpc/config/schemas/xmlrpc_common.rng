@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+	datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+	<!-- RelaxNG schema for XML-RPC (http://www.xmlrpc.com/spec) -->
+	<define name="param">
+		<element name="param">
+			<ref name="value" />
+		</element>
+	</define>
+	<define name="value">
+		<element name="value">
+			<choice>
+				<ref name="typedparam" />
+				<text />
+			</choice>
+		</element>
+	</define>
+	<define name="typedparam">
+		<choice>
+			<ref name="integer" />
+			<ref name="boolean" />
+			<ref name="stringval" />
+			<ref name="double" />
+			<ref name="datetime" />
+			<ref name="base64" />
+			<ref name="array" />
+			<ref name="struct" />
+			<ref name="nil" />
+		</choice>
+	</define>
+	<!-- string is a keyword -->
+	<define name="integer">
+		<choice>
+			<element name="i4">
+				<data type="int" />
+			</element>
+			<element name="int">
+				<data type="int" />
+			</element>
+		</choice>
+	</define>
+	<define name="boolean">
+		<element name="boolean">
+			<choice>
+				<value>0</value>
+				<value>1</value>
+			</choice>
+		</element>
+	</define>
+	<!-- *Not* xsd:boolean (see the spec) -->
+	<define name="stringval">
+		<element name="string">
+			<text />
+		</element>
+	</define>
+	<define name="double">
+		<element name="double">
+			<data type="double" />
+		</element>
+	</define>
+	<define name="datetime">
+		<element name="dateTime.iso8601">
+			<text />
+		</element>
+	</define>
+	<!--
+xsd:date does not allow
+"20051130T12:10:56"
+-->
+	<define name="base64">
+		<element name="base64">
+			<text />
+		</element>
+	</define>
+	<define name="array">
+		<element name="array">
+			<element name="data">
+				<zeroOrMore>
+					<ref name="value" />
+				</zeroOrMore>
+			</element>
+		</element>
+	</define>
+	<define name="struct">
+		<element name="struct">
+			<oneOrMore>
+				<ref name="namedmember" />
+			</oneOrMore>
+		</element>
+	</define>
+	<define name="namedmember">
+		<element name="member">
+			<interleave>
+				<ref name="membername" />
+				<ref name="value" />
+			</interleave>
+		</element>
+	</define>
+	<define name="member">
+		<element name="member">
+			<ref name="value" />
+		</element>
+	</define>
+	<define name="membername">
+		<element name="name">
+			<text />
+		</element>
+	</define>
+	<define name="nil">
+		<element name="nil">
+			<empty/>
+		</element>
+	</define>
+</grammar>

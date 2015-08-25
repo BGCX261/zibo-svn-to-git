@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zibo.image" default="packageImage">
+
+    <property name="phing.command" value="phing" />
+
+	<target name="packageImage">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageImage" />
+        </exec>
+    </target>
+
+</project>

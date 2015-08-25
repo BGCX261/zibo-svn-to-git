@@ -1,0 +1,32 @@
+body #bodyContainer {
+    width: auto;
+}
+
+#exception {
+    padding: 21px;
+    border: 1px solid #cf2e2e;
+    background-color: #F6D5CB;
+    color: #cf2e2e;
+}
+
+#exception a {
+    color: #F6212C;
+}
+
+#exception div.stack {
+    margin-top: 12px;
+    font-size: 90%;
+    white-space: pre;
+}
+
+#exception div.cause {
+    margin-top: 12px;
+}
+
+#exception div.cause ul {
+    margin-top: 12px;
+}
+
+#exception div.back {
+    margin-top: 12px;
+}

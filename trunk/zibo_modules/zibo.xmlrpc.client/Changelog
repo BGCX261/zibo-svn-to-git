@@ -1,0 +1,18 @@
+Version 0.2.1
+-------------
+* ClientController: Log the XmlRpcExceptions to the Zibo log
+
+Version 0.2.0
+-------------
+* ClientController: added request time and made a difference between a connection and a response error 
+* ClientModule: using new taskbar api
+* ClientView: added request time and add line numbers to request and response
+* ClientView: need full path for the style, added web directory in front of the style path
+* ParameterParser: added format option when unparsing
+* ParameterParser: bugfix for empty strings and nested structures when parsing 
+* improved styling
+* show root error when an XmlRpcInvalidResponseException occurs
+
+Version 0.1.1
+-------------
+* implemented XmlRpcInvalidResponseException

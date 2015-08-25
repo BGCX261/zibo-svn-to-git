@@ -1,0 +1,8 @@
+0.3
+---
+- used Image object to get the emoticons cached
+
+0.2
+---
+- made parser compatible with relative and absolute url's
+- added api documentation

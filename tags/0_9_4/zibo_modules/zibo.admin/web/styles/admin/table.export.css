@@ -1,0 +1,41 @@
+@import url(reset.css);
+
+body {
+    font-family: Verdana, Arial, Helvetica, Sans-Serif;
+    font-size: 0.80em;
+    padding: 25px;
+}
+
+h1 {
+    font-size: 125%;
+    margin-bottom: 21px;
+}
+
+table {
+    border: 1px solid #BBB;
+    width: 100%;
+}
+
+table tr {
+    border-bottom: 1px solid #BBB;
+}
+
+table tr.group {
+    background-color: #EBEBEB;
+}
+
+table tr th {
+    font-weight: bold;
+    background-color: #E3E3E3;
+    text-align: left;    
+}
+
+table tr.even {
+    background-color: #F3F3F3;
+}
+
+table tr th,
+table tr td {
+    padding: 3px;
+    border-right: 1px solid #BBB;
+}

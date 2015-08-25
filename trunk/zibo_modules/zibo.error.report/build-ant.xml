@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zibo.error.report" default="packageErrorReport">
+
+    <property name="phing.command" value="phing" />
+
+	<target name="packageErrorReport">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageErrorReport" />
+        </exec>
+    </target>
+
+</project>

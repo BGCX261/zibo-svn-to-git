@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zibo.jira" default="packageJira">
+
+    <property name="phing.command" value="phing" />
+
+	<target name="packageJira">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageJira" />
+        </exec>
+    </target>
+
+</project>

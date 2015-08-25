@@ -1,0 +1,35 @@
+#modules form {
+    margin-bottom: 18px;
+}
+
+#modules form input {
+    width: auto;
+}
+
+#modules form input.submit {
+    padding: 0 12px 0 12px;
+    width: auto;
+}
+
+#modules ul {
+    margin-bottom: 0;
+}
+
+#modules div.dependencies,
+#modules div.usage {
+    margin-top: 3px;
+}
+
+#modules div.dependencies ul,
+#modules div.usage ul {
+    display: none;
+    margin: 3px 0 7px 0;
+}
+
+#sidebar form {
+	margin: 0;
+}
+
+#sidebar form div.modules input {
+   width: 100px;
+}

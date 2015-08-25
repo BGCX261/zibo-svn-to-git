@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+	datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+
+	<define name="field">
+		<element name="field">
+			<ref name="attlist.field" />
+			<zeroOrMore>
+                <ref name="validation" />
+			</zeroOrMore>
+		</element>
+	</define>
+
+	<define name="index">
+		<element name="index">
+			<attribute name="name">
+				<text />
+			</attribute>
+			<oneOrMore>
+				<element name="indexField">
+        			<attribute name="name">
+        				<text />
+        			</attribute>
+				</element>
+			</oneOrMore>
+		</element>
+	</define>
+	
+	<define name="format">
+        <element name="format">
+            <attribute name="name">
+                <text />
+            </attribute>
+            <text />
+        </element>
+	</define>
+	
+	<define name="validation">
+        <element name="validation">
+            <group>
+                <attribute name="name">
+                    <text />
+                </attribute>
+            </group>
+            <zeroOrMore>
+                <element name="parameter">
+                    <ref name="attlist.parameter" />
+                </element>
+            </zeroOrMore>
+        </element>
+	</define>
+
+	<define name="attlist.field">
+		<interleave>
+			<attribute name="name">
+				<text />
+			</attribute>
+			<optional>
+				<attribute name="label">
+				    <text />
+				</attribute>
+			</optional>
+			<optional>
+				<attribute name="localized">
+					<choice>
+						<value>true</value>
+						<value>false</value>
+					</choice>
+				</attribute>
+			</optional>
+			<choice>
+				<group>
+					<attribute name="type">
+						<text />
+					</attribute>
+					<optional>
+						<attribute name="unique">
+							<choice>
+								<value>true</value>
+								<value>false</value>
+							</choice>
+						</attribute>
+					</optional>
+					<optional>
+						<attribute name="default">
+                            <text />
+						</attribute>
+					</optional>
+				</group>
+				<group>
+					<attribute name="model">
+						<text />
+					</attribute>
+					<optional>
+						<attribute name="relation">
+							<choice>
+								<value>belongsTo</value>
+								<value>hasOne</value>
+								<value>hasMany</value>
+							</choice>
+						</attribute>
+					</optional>
+					<optional>
+						<attribute name="relationOrder">
+							<text />
+						</attribute>
+					</optional>
+					<optional>
+						<attribute name="indexOn">
+							<text />
+						</attribute>
+					</optional>
+					<optional>
+						<attribute name="linkModel">
+							<text />
+						</attribute>
+					</optional>
+					<optional>
+						<attribute name="dependant">
+							<choice>
+								<value>true</value>
+								<value>false</value>
+							</choice>
+						</attribute>
+					</optional>
+					<optional>
+						<attribute name="foreignKey">
+							<text />
+						</attribute>
+					</optional>
+				</group>
+			</choice>
+		</interleave>
+	</define>
+
+	<define name="attlist.parameter">
+		<group>
+			<attribute name="name">
+				<text />
+			</attribute>
+			<attribute name="value">
+				<text />
+			</attribute>
+		</group>
+	</define>
+
+</grammar>

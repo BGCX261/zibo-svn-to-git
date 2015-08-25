@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zibo.emoticons" default="packageEmoticons">
+
+    <property name="phing.command" value="phing" />
+
+	<target name="packageEmoticons">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageEmoticons" />
+        </exec>
+    </target>
+
+</project>

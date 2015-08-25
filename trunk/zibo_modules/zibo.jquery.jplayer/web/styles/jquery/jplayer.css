@@ -1,0 +1,56 @@
+div.jplayerContainer {
+    position: relative;
+    padding: 17px;
+}
+
+div.jplayerContainer ul.icons {
+    margin: 0; 
+    padding: 0;
+}
+
+div.jplayerContainer ul.icons li {
+	margin: 2px; 
+	position: relative; 
+	padding: 4px 0; 
+	cursor: pointer; 
+	float: left;  
+	list-style: none;
+}
+
+div.jplayerContainer ul.icons span.ui-icon {
+    float: left; 
+    margin: 0 4px;
+}
+
+div.jplayerContainer ul.icons li.volume-min {
+    margin: 2px 70px 2px 244px;
+}
+
+div.jplayerContainer div.volume {
+    position:absolute;
+    top:30px;
+    left:356px;
+    width:50px;
+    height:.4em;
+}
+
+div.jplayerContainer div.volume .ui-slider-handle {
+    height:.8em;
+    width:.8em;
+}
+
+div.jplayerContainer div.playbackContainer {
+    position:absolute;
+    top:27px;
+    left:100px;
+    width:200px;
+}
+
+div.jplayerContainer div.slider-playback .ui-slider-handle {
+    height:1.6em;
+}
+
+div.jplayerContainer div.playbackContainer .ui-progressbar {
+    height:.2em;
+    border:0;
+}

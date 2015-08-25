@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modules xmlns="http://www.zibo.be/ns/zibo/admin/modules"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.zibo.be/ns/zibo/admin/modules http://www.zibo.be/ns/zibo/admin/modules ">
+    <module namespace="zibo" name="orm" version="0.8.3" ziboVersion="0.9.0">
+        <dependency namespace="zibo" name="admin" version="0.16.0" />
+        <dependency namespace="zibo" name="database" version="0.7.3" />
+        <dependency namespace="zibo" name="i18n" version="0.4.0" />
+        <dependency namespace="zibo" name="image" version="0.2.1" />
+        <dependency namespace="zibo" name="tokenizer" version="0.1.0" />
+        <dependency namespace="zibo" name="validation" version="0.5.0" />
+        <dependency namespace="zibo" name="wizard" version="0.1.0" />
+    </module>
+</modules>

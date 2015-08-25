@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.zibo.be/ns/zibo/orm/models" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.zibo.be/ns/zibo/orm/models">
+
+    <xs:element name="models">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="model" type="model" minOccurs="1" maxOccurs="unbounded">
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+	<xs:complexType name="baseModel" abstract="true">
+        <xs:attribute name="name" type="xs:string" use="required" />
+        <xs:attribute name="modelClass" type="xs:string" />
+        <xs:attribute name="dataClass" type="xs:string" />
+        <xs:attribute name="log" type="xs:boolean" />
+        <xs:attribute name="willBlockDeleteWhenUsed" type="xs:boolean" />
+	</xs:complexType>
+
+    <xs:complexType name="model">
+        <xs:complexContent>
+            <xs:extension base="baseModel">
+                <xs:sequence>
+                            <xs:choice>
+                                <xs:element name="field" type="propertyField" />
+                                <xs:element name="field" type="relationField" />
+                            </xs:choice>
+                            
+                            <xs:element name="index" minOccurs="0">
+                                <xs:attribute name="name" type="xs:string" use="required" />
+                                <xs:sequence>
+                                    <xs:element name="field" minOccurs="1">
+                                        <xs:attribute name="name" type="xs:string" use="required" />
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:element>
+    
+                            <xs:element name="format" minOccurs="0" maxOccurs="1">
+                                <xs:sequence>
+                                    <xs:element name="title" type="xs:string" minOccurs="1" maxOccurs="1" />
+                                    <xs:element name="teaser" type="xs:string" minOccurs="1" maxOccurs="1" />
+                                </xs:sequence>
+                            </xs:element>
+                        </xs:sequence>            
+            </xs:extension>                
+        </xs:complexContent>
+    </xs:complexType>
+
+	<xs:complexType name="baseModelField" abstract="true">
+        <xs:attribute name="name" type="xs:string" use="required" />
+        <xs:attribute name="localized" type="xs:boolean" />
+	</xs:complexType>
+	
+	<xs:complexType name="modelField" abstract="true">
+	   <xs:complexContent>
+	       <xs:extension base="baseModelField">
+	           <xs:sequence>        
+			        <xs:element name="validation" minOccurs="0" maxOccurs="1">
+			             <xs:complexType>
+			           <xs:sequence>        
+					       <xs:element name="validator" type="fieldValidator" minOccurs="1" />
+				       </xs:sequence>
+				       </xs:complexType>
+			       </xs:element>
+		       </xs:sequence>
+	       </xs:extension>
+       </xs:complexContent>
+    </xs:complexType>
+	
+	<xs:complexType name="propertyField">
+	   <xs:complexContent>
+	       <xs:extension base="modelField">
+                <xs:attribute name="type" type="xs:string" use="required" />
+                <xs:attribute name="unique" type="xs:boolean" />
+                <xs:attribute name="default" type="xs:string" />
+	       </xs:extension>
+	   </xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="relationField">
+	   <xs:complexContent>
+	       <xs:extension base="modelField">
+                <xs:attribute name="model" type="xs:string" use="required" />
+                <xs:attribute name="relation" type="xs:string" use="required" />
+                <xs:attribute name="linkModel" type="xs:string" />
+                <xs:attribute name="relationOrder" type="xs:string" />
+                <xs:attribute name="dependant" type="xs:boolean" />
+	       </xs:extension>
+	   </xs:complexContent>
+	</xs:complexType>
+
+    <xs:complexType name="baseFieldValidator" abstract="true">
+        <xs:attribute name="name" type="xs:string" use="required" />
+    </xs:complexType>
+
+	<xs:complexType name="fieldValidator">
+	   <xs:complexContent>
+	       <xs:extension base="baseFieldValidator">
+                <xs:sequence>
+                    <xs:element name="parameter" minOccurs="0">
+                        <xs:complexType>
+	                        <xs:attribute name="name" type="xs:string" use="required" />
+	                        <xs:attribute name="value" type="xs:string" use="required" />
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+	       </xs:extension>
+	   </xs:complexContent>
+	</xs:complexType>
+	
+</xs:schema>

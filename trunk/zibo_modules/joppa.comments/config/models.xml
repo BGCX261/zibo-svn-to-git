@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<models>
+    <model name="Comment" modelClass="joppa\comment\model\CommentModel" dataClass="joppa\comment\model\data\CommentData">
+        <field name="parent" model="Comment" relation="belongsTo" />
+        <field name="objectType" type="string">
+            <validation name="required" />
+        </field>
+        <field name="objectId" type="string">
+            <validation name="required" />
+        </field>
+        <field name="name" type="string">
+            <validation name="required" />
+        </field>
+        <field name="email" type="string" />
+        <field name="comment" type="text">
+            <validation name="required" />
+        </field>
+        <field name="author" model="User" relation="belongsTo" />
+        <field name="locale" type="string" />
+        <field name="ip" type="string" />
+        <field name="dateAdded" type="datetime" />
+        <field name="dateModified" type="datetime" />
+        <field name="version" type="integer" />
+        
+        <index name="object">
+            <indexField name="objectType" />
+            <indexField name="objectId" />
+        </index>
+        <index name="objectParent">
+            <indexField name="objectType" />
+            <indexField name="objectId" />
+            <indexField name="parent" />
+        </index>
+    </model>
+</models>

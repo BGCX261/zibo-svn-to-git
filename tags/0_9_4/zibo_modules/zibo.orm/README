@@ -1,0 +1,14 @@
+Zibo Configuration:
+-------------------
+orm.file.log.model
+
+Zibo Events:
+------------
+orm.save.field.pre
+orm.save.field.post
+orm.save.pre
+orm.save.post
+
+PHPUnit Tests:
+--------------
+You can use the zibo_test project in the zibo svn on http://zibo.googlcode.com 

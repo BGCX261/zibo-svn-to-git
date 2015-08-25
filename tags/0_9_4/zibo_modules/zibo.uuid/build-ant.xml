@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zibo.uuid" default="packageUUID">
+
+    <property name="phing.command" value="phing" />
+
+	<target name="packageUUID">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageUUID" />
+        </exec>
+    </target>
+
+</project>

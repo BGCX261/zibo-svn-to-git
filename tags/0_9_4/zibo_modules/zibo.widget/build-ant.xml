@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zibo.widget" default="packageWidget">
+
+    <property name="phing.command" value="phing" />
+
+	<target name="packageWidget">
+        <exec dir="" executable="${phing.command}">
+            <arg line="packageWidget" />
+        </exec>
+    </target>
+
+</project>

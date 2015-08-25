@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+	<route path="xmlrpc/client" controller="zibo\xmlrpc\controller\ClientController" action="indexAction" />
+</routes>

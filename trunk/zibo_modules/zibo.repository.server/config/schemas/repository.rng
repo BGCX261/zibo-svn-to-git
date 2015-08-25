@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+
+  <start>
+    <element name="repository">
+    	<ref name="modules"/>
+    </element>
+  </start>
+  
+  <define name="modules">
+  	<element name="modules">
+  	<zeroOrMore>
+  		<ref name="module"/>
+  	</zeroOrMore>
+  	</element>
+  </define>
+
+  <define name="module">
+    <element name="module">
+      <ref name="attlist.module"/>
+      <oneOrMore>
+      	<ref name="version"/>
+      </oneOrMore>
+    </element>
+  </define>
+  
+  <define name="version">
+  	<element name="version">
+      <ref name="attlist.version"/>
+  	  <zeroOrMore>
+        <ref name="dependency"/>
+      </zeroOrMore>
+  	</element>
+  </define>
+  
+  <define name="dependency">
+    <element name="dependency">
+      <ref name="attlist.dependency"/>
+      <empty/>
+    </element>
+  </define>
+  
+  <define name="attlist.module">
+    <group>
+	    <attribute name="namespace"/>
+	    <attribute name="name"/>
+    </group>
+  </define>
+
+  <define name="attlist.dependency">
+    <group>
+       <attribute name="namespace"><text/></attribute>
+       <attribute name="name"><text/></attribute>
+       <attribute name="version"><text/></attribute>
+    </group>
+  </define>
+  
+  <define name="attlist.version">
+  	<group>
+  		<attribute name="version"><text/></attribute>
+  		<attribute name="ziboVersion"><text/></attribute>
+  	</group>
+  </define>
+
+</grammar>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+    <route path="admin/locales" controller="zibo\admin\controller\LocalesController" />
+    <route path="admin/modules" controller="zibo\admin\controller\ModulesController" />
+    <route path="admin/security" controller="zibo\admin\controller\SecurityController" />    
+    <route path="admin/system" controller="zibo\admin\controller\SystemController" />    
+    <route path="ajax/sidebar" controller="zibo\admin\controller\SidebarController" />
+    <route path="authentication" controller="zibo\admin\controller\AuthenticationController" />
+    <route path="localize" controller="zibo\admin\controller\LocalizeController" />
+    <route path="profile" controller="zibo\admin\controller\ProfileController" />
+    <route path="web" controller="zibo\admin\controller\WebController" />
+</routes>

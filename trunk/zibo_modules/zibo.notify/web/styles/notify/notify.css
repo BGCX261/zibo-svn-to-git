@@ -1,0 +1,15 @@
+#notifyIcon {
+	cursor: pointer;
+}
+
+#notifyContainer {
+	display: none; 
+	position: absolute;
+	
+	background-color: #999;
+	border: 5px solid #BBB;
+	
+	margin-top: 15px;
+	padding: 12px;
+	width: 250px;
+}
